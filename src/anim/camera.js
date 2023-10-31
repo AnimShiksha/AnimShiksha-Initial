@@ -1,4 +1,3 @@
-
 let video;  // webcam input
 let model;  // Face Landmarks machine-learning model
 let face;   // detected face
@@ -14,9 +13,7 @@ let constraints = {
 //   audio: true
 };
 
-let tummy;
-let callback;
-let pose_;
+
 
 // http://127.0.0.1:5500/web/captureFace.html
 
@@ -35,18 +32,18 @@ function setup() {
   
   while(!tf.ready()) {}
 
-  loadModelClass = new Loadmodels();
-  callback = new ModelCallBacks()
-  
-  poseNet = ml5.poseNet(video,loadModelClass.poseNetmodelLoaded); 
-  poseNet.on('pose',callback.gotPose);
-
-  loadModelClass.loadFaceModel();
-
-  tummy = new Tummy();
+  loadFaceModel();
 
 }
 
+// This `async` keyword is used to wait for the proccess and do another process.
+async function loadFaceModel() {
+  model = await faceLandmarksDetection.load(
+    faceLandmarksDetection.SupportedPackages.mediapipeFacemesh,
+    
+    { maxFaces: 2 }
+  );
+}
 
 
 function scalePoint(pt) {
@@ -56,6 +53,19 @@ function scalePoint(pt) {
 }
 
 
+async function getFace() {
+  const predictions = await model.estimateFaces({
+    input: document.querySelector('video')
+  }); 
+
+  // Checking found face or not!
+  if (predictions.length === 0) {
+    face = undefined;
+  }
+  else {
+    face = predictions[0];
+  }
+}
 
 function flipCamera() {
   translate(width, 0);
@@ -64,20 +74,19 @@ function flipCamera() {
 
 
 function draw() {
+  // This shows that both are working fine.
   if (video.loadedmetadata && model !== undefined) {
-    callback.getFace();
-    if (face !== undefined) {
-      flipCamera();
-      image(video, 0,0, width,height);
-      drawFace(face);
-    }
-  
-    if(pose_){
-      tummy.tummyAnim(pose_);
-    }
+    getFace();
   }
 
+  if (face !== undefined) {
+    flipCamera();
+    image(video, 0,0, width,height);
+    // console.log(face);
+    // noLoop();
+    drawFace(face);
 
+  }
 }
 
 
@@ -110,8 +119,8 @@ function drawFace(faceModel){
   let leftEye = scalePoint(faceModel.annotations.leftEyeIris[0]);
   let rightEye = scalePoint(faceModel.annotations.rightEyeIris[0]);
 
-  eye.drawEye(leftEye,bestFitSize,2);
-  eye.drawEye(rightEye,bestFitSize,2);
+  eye.drawEye(leftEye,bestFitSize,0);
+  eye.drawEye(rightEye,bestFitSize,0);
 
   let nose_ = scalePoint(faceModel.annotations.noseTip[0]);
   nose.drawNose(nose_,bestFitSize*1.2);
@@ -122,72 +131,3 @@ function drawFace(faceModel){
 
 
 
-class Loadmodels{
-
-  async poseNetmodelLoaded() {
-    console.log('Present🤚🏻(Posenet Model)');
-  }
-
-  async loadFaceModel() {
-    model = await faceLandmarksDetection.load(
-      faceLandmarksDetection.SupportedPackages.mediapipeFacemesh,
-      
-      { maxFaces: 2 }
-    );
-  }
-}
-
-class ModelCallBacks{    
-  async  getFace() {
-    const predictions = await model.estimateFaces({
-      input: document.querySelector('video')
-    }); 
-
-    // Checking found face or not!
-    if (predictions.length === 0) {
-      face = undefined;
-    }
-    else {
-      face = predictions[0];
-    }
-  }
-
-
-  gotPose(poses){
-    if(poses.length > 0){
-        pose_ = poses[0].pose;
-        // skeleton = poses[0].skeleton;
-    }
-  }
-}
-
-
-
-
-class Tummy {
-  constructor() {
-  }
-
-  tummyAnim(pose_){
-
-    let leftShoulder = pose_.leftShoulder
-    let rightShoulder = pose_.rightShoulder
-    let leftHip = pose_.leftHip
-    let rightHip = pose_.rightHip
-
-    let midx = (leftShoulder.x + rightShoulder.x)/2
-    let midy = (leftShoulder.y + rightShoulder.y)/2
-
-    fill(255, 0, 0); // Red color for the shirt
-    beginShape();
-
-    curveVertex(leftShoulder.x, leftShoulder.y);
-    curveVertex(rightShoulder.x, rightShoulder.y);
-    curveVertex(rightHip.x, rightHip.y);
-    curveVertex(leftHip.x, leftHip.y);
-    curveVertex(leftShoulder.x, leftShoulder.y);
-
-    endShape(CLOSE);
-  }
-
-}
