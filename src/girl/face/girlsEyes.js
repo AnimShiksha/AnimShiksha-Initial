@@ -5,8 +5,7 @@ class GirlEyes{
 
         let leftUpperEye2 = eyeLandmarks.leftEyeUpper1;
         let leftMidUpper2 = eyeLandmarks.leftEyeUpper0[3];
-        fill(0);
-        ellipse(scalePoint(leftMidUpper2).x, scalePoint(leftMidUpper2).y, 4);
+
 
         // fill(222);
         noFill();
@@ -38,6 +37,10 @@ class GirlEyes{
         let rightMidUpper2 = eyeLandmarks.rightEyeUpper0[3];
         fill(0);
         ellipse(scalePoint(rightMidUpper2).x, scalePoint(rightMidUpper2).y, 8);
+        fill(0);
+        ellipse(scalePoint(leftMidUpper2).x, scalePoint(leftMidUpper2).y, 8);
+
+
         noFill();
         stroke(22,33,3);
         strokeWeight(4);
