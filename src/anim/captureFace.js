@@ -1,4 +1,3 @@
-
 let video;  // webcam input
 let model;  // Face Landmarks machine-learning model
 let face;   // detected face
