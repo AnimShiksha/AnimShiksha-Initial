@@ -75,8 +75,8 @@ class Legs{
         // ellipse(rightAnkleX,rightAnkleY,legCircleSize,legCircleSize);
 
 
-        ellipse(leftKneeX, leftKneeY, legCircleSize, legCircleSize);
-        ellipse(rightKneeX, rightKneeY, legCircleSize, legCircleSize);
+        rect(leftKneeX, leftKneeY, legCircleSize, legCircleSize);
+        rect(rightKneeX, rightKneeY, legCircleSize, legCircleSize);
 
 
     }

@@ -32,7 +32,7 @@ class Hands{
 
         // Left hand
 
-        fill(9, 18, 12);
+        fill(255, 204, 153); // Skin color
         // stroke(67, 13, 214);
         // strokeWeight(3);
         beginShape();
@@ -52,8 +52,8 @@ class Hands{
         endShape(CLOSE);
 
                 
-        ellipse(leftElbowX, leftElbowY, handSize, handSize);
-        ellipse(rightElbowX, rightElbowY, handSize, handSize);
+        // ellipse(leftElbowX, leftElbowY, handSize, handSize);
+        // ellipse(rightElbowX, rightElbowY, handSize, handSize);
     }
 
 
@@ -71,7 +71,7 @@ class Hands{
         let rightElbowY = pose_.rightElbow.y;
 
 
-        fill(9, 18, 12);
+        fill(255, 204, 153); // Skin color
         beginShape();
         curveVertex(leftElbowX+leftElbowX/handWidth, leftElbowY-leftElbowY/handWidth);
         curveVertex(leftElbowX-leftElbowX/handWidth, leftElbowY+leftElbowY/handWidth);
@@ -91,8 +91,8 @@ class Hands{
         
 
         fill(0,222,22);
-        ellipse(leftWristX,leftWristY,handSize,handSize);
-        ellipse(rightWristX,rightWristY,handSize,handSize);
+        // ellipse(leftWristX,leftWristY,handSize,handSize);
+        // ellipse(rightWristX,rightWristY,handSize,handSize);
 
 
     }

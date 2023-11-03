@@ -17,6 +17,8 @@ let constraints = {
 //   audio: true
 };
 
+let backgroundIMG;
+
 
 function setup() {
   createCanvas(1280, 720);
@@ -29,6 +31,7 @@ function setup() {
   poseNet = ml5.poseNet(video, modelLoaded);
   poseNet.on('pose',gotPose);
 
+  backgroundIMG = loadImage('artifacts/moon.avif')
   // video.size(480,360);
 
   drawface_ = new DrawFace();
@@ -54,7 +57,8 @@ function modelReady() {
 }
 
 function draw() {
-  background(242, 211, 10);
+  // background(242, 211, 10);
+  background(backgroundIMG,0,0)
   if(predictions.length){
     if(poses){
       drawNeck()
