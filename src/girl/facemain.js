@@ -4,6 +4,7 @@ class GirlsFace{
     girlsFace(faceModel){
         // let eye = new Eyes();
         let eyeBrow = new GirlsEyeBrow();
+        let bindi = new Bindi()
         // let lips = new Lips()
         // let nose = new Nose()
         // let hair = new Hairs()
@@ -27,6 +28,8 @@ class GirlsFace{
         endShape(CLOSE);
 
         // console.log(faceModel.annotations)
+
+        bindi.girlBindi(faceModel.annotations);
 
         eyeBrow.girlsEyeBrow(faceModel.annotations,bestFitSize/1.5);
       
