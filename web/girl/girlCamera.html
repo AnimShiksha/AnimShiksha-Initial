@@ -7,11 +7,8 @@
     <script src="https://unpkg.com/ml5@latest/dist/ml5.min.js"></script>
 
     <!-- Face -->
-    <script src="/src/anim/face/eyebrow.js"></script>
-    <script src="/src/anim/face/lips.js"></script>
-    <script src="/src/anim/face/eyes.js"></script>
-    <script src="/src/anim/face/nose.js"></script>
-    <script src="/src/anim/face/hairs.js"></script>
+    <script src="/src/girl/face/girlsEyeBrows.js"></script>
+
 
     <!-- Body -->
     <script src='/src/anim/bodyParts/tummy.js'></script>
@@ -24,9 +21,9 @@
     <script src='/src/anim/clothes/pant.js'></script>
 
     <!-- Main Code. -->
-    <script src='/src/anim/drawFace.js'></script>
-    <script src='/src/anim/drawBody.js'></script>
-    <script src='/src/anim/camera.js'></script>
+    <script src='/src/girl/facemain.js'></script>
+    <script src='/src/girl/bodymain.js'></script>
+    <script src='/src/girl/main.js'></script>
 
     
     
@@ -38,3 +35,45 @@
 </html>
 
 
+class GirlsEyeBrow {
+    constructor() {}
+  
+    createNiceEyebrow(eyeBrowLandmarks, eyeBrowsSize) {
+      let leftEyeBrow = eyeBrowLandmarks.leftEyebrowUpper;
+      fill(0);
+      beginShape();
+      for (let i = 0; i < leftEyeBrow.length; i++) {
+        let currentPoint = scalePoint(leftEyeBrow[i]);
+        let nextPoint = scalePoint(leftEyeBrow[i + 1]);
+  
+        if (i === leftEyeBrow.length - 1) {
+          vertex(currentPoint.x, currentPoint.y - eyeBrowsSize);
+        } else {
+          let controlPointX = (currentPoint.x + nextPoint.x) / 2;
+          let controlPointY = (currentPoint.y - eyeBrowsSize);
+          vertex(currentPoint.x, currentPoint.y);
+          quadraticVertex(controlPointX, controlPointY, nextPoint.x, nextPoint.y);
+        }
+      }
+      endShape();
+  
+      let rightEyeBrow = eyeBrowLandmarks.rightEyebrowUpper;
+      fill(9);
+      beginShape();
+      for (let i = 0; i < rightEyeBrow.length; i++) {
+        let currentPoint = scalePoint(rightEyeBrow[i]);
+        let nextPoint = scalePoint(rightEyeBrow[i + 1]);
+  
+        if (i === rightEyeBrow.length - 1) {
+          vertex(currentPoint.x, currentPoint.y - eyeBrowsSize);
+        } else {
+          let controlPointX = (currentPoint.x + nextPoint.x) / 2;
+          let controlPointY = (currentPoint.y - eyeBrowsSize);
+          vertex(currentPoint.x, currentPoint.y);
+          quadraticVertex(controlPointX, controlPointY, nextPoint.x, nextPoint.y);
+        }
+      }
+      endShape();
+    }
+  }
+  
