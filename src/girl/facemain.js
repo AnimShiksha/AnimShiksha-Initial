@@ -2,7 +2,7 @@ class GirlsFace{
     constructor(){}
 
     girlsFace(faceModel){
-        // let eye = new Eyes();
+        let eye = new GirlEyes();
         let eyeBrow = new GirlsEyeBrow();
         let bindi = new Bindi()
         // let lips = new Lips()
@@ -30,6 +30,7 @@ class GirlsFace{
         // console.log(faceModel.annotations)
 
         bindi.girlBindi(faceModel.annotations);
+        eye.makeEyes(faceModel.annotations);
 
         eyeBrow.girlsEyeBrow(faceModel.annotations,bestFitSize/1.5);
       

@@ -4,7 +4,7 @@ class Bindi{
     girlBindi(bindiLandmarks){
         let landmark = bindiLandmarks.midwayBetweenEyes;
 
-        stroke(0,222,0);
+        stroke(186, 9, 18);
         strokeWeight(7);
         beginShape();
         for(let i of landmark){
