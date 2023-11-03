@@ -1,0 +1,17 @@
+[
+  {
+    "kind": 1,
+    "language": "markdown",
+    "value": "# Hair"
+  },
+  {
+    "kind": 2,
+    "language": "javascript",
+    "value": "function setup() {\r\n    createCanvas(640, 480);\r\n    background(255,22);    \r\n}\r\n\r\nfunction draw(){\r\n    let up = 20;\r\n    let low = 10;\r\n    beginShape();\r\n    beginShape();\r\n    vertex(300, 400);\r\n    vertex(320, 250);\r\n    // vertex(340, 280);\r\n    // vertex(360, 250);\r\n    // vertex(380, 280);\r\n    // vertex(400, 250);\r\n    // vertex(420, 280);\r\n    // vertex(440, 250);\r\n    // vertex(460, 280);\r\n    // vertex(480, 250);\r\n    // vertex(500, 400);\r\n    endShape();\r\n}"
+  },
+  {
+    "kind": 2,
+    "language": "javascript",
+    "value": "        // Hair\r\n        let yUp = 50\r\n        let yDown = 40\r\n        fill(3)\r\n        vertex(points[25]._x, points[25]._y/headHight);\r\n        for(let i=26;i > 17;i--){\r\n          if(i%2==0){\r\n            vertex(points[i]._x, points[i]._y/headHight-yUp);\r\n          } else{\r\n            vertex(points[i]._x, points[i]._y/headHight-yDown);\r\n          }\r\n        }\r\n        vertex(points[17]._x, points[17]._y/headHight);\r\n"
+  }
+]

@@ -1,0 +1,32 @@
+[
+  {
+    "kind": 1,
+    "language": "markdown",
+    "value": "## face with size."
+  },
+  {
+    "kind": 2,
+    "language": "javascript",
+    "value": "let myFace;\r\nlet facefaceWidth = 100; // Set the initial faceWidth of the face\r\nlet facefaceHeight = 100; // Set the initial faceHeight of the face\r\n\r\nfunction setup() {\r\n  createCanvas(640, 480);\r\n}\r\n\r\nfunction draw() {\r\n  myFace = new FaceNew_(facefaceWidth, facefaceHeight); \r\n}\r\n\r\nclass FaceNew_ {\r\n  constructor(faceWidth, faceHeight) {\r\n  background(186, 196, 10);\r\n\r\n    let middleX = 200;\r\n    let middleY = 100;\r\n    stroke(43);\r\n    strokeWeight(5);\r\n    beginShape(POINTS);\r\n    beginShape();\r\n\r\n    // Middle\r\n    curveVertex(middleX, middleY);\r\n\r\n    // RIGHT Part\r\n    curveVertex(middleX + faceWidth, middleY); // step 1\r\n    curveVertex(middleX + faceWidth + faceWidth/2.5, middleY + faceHeight/2.5); // step 2\r\n    curveVertex(middleX + faceWidth + faceWidth/2.5, middleY + faceHeight/2.5); // step 3\r\n    curveVertex(middleX + faceWidth + faceWidth/5, middleY + faceHeight/2.5 + faceHeight/2.5); // step 4\r\n    curveVertex(middleX + faceWidth - faceWidth/2.5, middleY + faceHeight/2.5 + faceHeight*2); // step 5\r\n\r\n\r\n    // LEFT Part\r\n\r\n    curveVertex(middleX - faceWidth + faceWidth/2.5, middleY + faceHeight/2.5 + faceHeight*2);\r\n    curveVertex(middleX - faceWidth - faceWidth/5, middleY + faceHeight/2.5 + faceHeight/2.5);\r\n    curveVertex(middleX - faceWidth - faceWidth/2.5, middleY + faceHeight/2.5);\r\n    curveVertex(middleX - faceWidth, middleY);\r\n\r\n\r\n    // curveVertex(middleX - 50 + 20, middleY + 20 + 100);\r\n    // curveVertex(middleX - 50 - 10, middleY + 20 + 20);\r\n    // curveVertex(middleX - 50 - 20, middleY + 20);\r\n    // curveVertex(middleX - 50, middleY);\r\n\r\n    endShape(CLOSE);\r\n\r\n    fill(255);\r\n    text(\"(\" + mouseX + \",\" + mouseY + \")\", mouseX, mouseY);\r\n  }\r\n}\r\n"
+  },
+  {
+    "kind": 1,
+    "language": "markdown",
+    "value": "## NOse"
+  },
+  {
+    "kind": 2,
+    "language": "javascript",
+    "value": "let nose;\r\n\r\nfunction setup() {\r\n  createCanvas(640, 480);\r\n}\r\n\r\nfunction draw() {\r\n  nose = new Nose(); \r\n}\r\n\r\nclass Nose {\r\n  constructor() {\r\n  background(186, 196, 10);\r\n    let middleX = 200;\r\n    let middleY = 100;\r\n    let noseWidth = 50;\r\n    let noseHeight = 30;\r\n    // stroke(43);\r\n    strokeWeight(3);\r\n    fill(244);\r\n    beginShape(POINTS);\r\n    beginShape();\r\n    // vertex(middleX, middleY);\r\n    // vertex(middleX+50, middleY+30);\r\n    // vertex(middleX, middleY+30);\r\n\r\n    curveVertex(middleX, middleY);\r\n    curveVertex(middleX+noseWidth, middleY+noseHeight);\r\n    curveVertex(middleX, middleY+noseHeight);\r\n    curveVertex(middleX, middleY);\r\n    \r\n\r\n    endShape(CLOSE);\r\n\r\n    fill(0);\r\n    text(\"(\" + mouseX + \",\" + mouseY + \")\", mouseX, mouseY);\r\n  }\r\n}\r\n"
+  },
+  {
+    "kind": 1,
+    "language": "markdown",
+    "value": "## mouth"
+  },
+  {
+    "kind": 2,
+    "language": "javascript",
+    "value": "let mouth;\r\n\r\nfunction setup() {\r\n  createCanvas(640, 480);\r\n}\r\n\r\nfunction draw() {\r\n  mouth = new Mouth(); \r\n}\r\n\r\nclass Mouth {\r\n  constructor() {\r\n  background(186, 196, 10);\r\n    let middleX = 200;\r\n    let middleY = 100;\r\n    let mouthHeight = 50;\r\n    let mouthWidth = 50;\r\n    // stroke(43);\r\n    strokeWeight(3);\r\n    fill(244);\r\n    beginShape(POINTS);\r\n    beginShape();\r\n    // vertex(middleX, middleY);\r\n    // vertex(middleX+50, middleY+30);\r\n    // vertex(middleX, middleY+30);\r\n\r\n\r\n    // Middle\r\n    curveVertex(middleX, middleY);\r\n\r\n    // Right\r\n    curveVertex(middleX+mouthWidth, middleY);\r\n    curveVertex(middleX, middleY+mouthHeight);\r\n    // curveVertex(middleX, middleY);\r\n\r\n    // Left\r\n    curveVertex(middleX, middleY+mouthHeight);\r\n    curveVertex(middleX-mouthWidth, middleY);\r\n    endShape(CLOSE);\r\n\r\n    fill(0);\r\n    text(\"(\" + mouseX + \",\" + mouseY + \")\", mouseX, mouseY);\r\n  }\r\n}\r\n"
+  }
+]

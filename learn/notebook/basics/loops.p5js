@@ -1,0 +1,37 @@
+[
+  {
+    "kind": 1,
+    "language": "markdown",
+    "value": "## with out loop"
+  },
+  {
+    "kind": 2,
+    "language": "javascript",
+    "value": "function setup(){\r\n    createCanvas(1200, 700);\r\n    background(256);\r\n}\r\n\r\nfunction draw(){\r\n    var x = 0;\r\n    noStroke();\r\n    fill(255, 222, 0);\r\n\r\n    ellipse(x, 100, 20, 20);\r\n    x +=20;\r\n    ellipse(x, 100, 20, 20);\r\n    x +=20;\r\n    ellipse(x, 100, 20, 20);\r\n    x +=20;\r\n    ellipse(x, 100, 20, 20);\r\n    x +=20;\r\n    ellipse(x, 100, 20, 20);\r\n    x +=20;\r\n    ellipse(x, 100, 20, 20);\r\n    x +=20;\r\n    ellipse(x, 100, 20, 20);\r\n    x +=20;\r\n    ellipse(x, 100, 20, 20);\r\n    x +=20;\r\n    ellipse(x, 100, 20, 20);\r\n    x +=20;\r\n    ellipse(x, 100, 20, 20);\r\n    x +=20;\r\n    ellipse(x, 100, 20, 20);\r\n    x +=20;\r\n    ellipse(x, 100, 20, 20);\r\n    x +=20;\r\n    ellipse(x, 100, 20, 20);\r\n    x +=20;\r\n    ellipse(x, 100, 20, 20);\r\n    x +=20;\r\n    ellipse(x, 100, 20, 20);\r\n    x +=20;\r\n    ellipse(x, 100, 20, 20);\r\n    x +=20;\r\n    ellipse(x, 100, 20, 20);\r\n    x +=20;\r\n    ellipse(x, 100, 20, 20);\r\n    x +=20;\r\n   \r\n   \r\n}\r\n"
+  },
+  {
+    "kind": 1,
+    "language": "markdown",
+    "value": "## after loop."
+  },
+  {
+    "kind": 1,
+    "language": "markdown",
+    "value": "## while loop:"
+  },
+  {
+    "kind": 2,
+    "language": "javascript",
+    "value": "var col = {\r\n    r:255,\r\n    g:0,\r\n    b:0\r\n};\r\nvar offset = 0;\r\n\r\nfunction setup(){\r\n    createCanvas(600, 400);\r\n}\r\n\r\nfunction draw(){\r\n    background(256);\r\n\r\n    var x = 0;\r\n    noStroke();\r\n    fill(255, 222, 0);\r\n\r\n    while (x <= width){\r\n    col.r = random(0,255);\r\n    col.g = random(0,255);\r\n    col.b = random(0,255);\r\n    fill(col.r , col.g,col.b,100);\r\n    ellipse(x+offset, 100, 20, 20);\r\n    x +=20;\r\n    }\r\n    offset +=1;\r\n}\r\n"
+  },
+  {
+    "kind": 2,
+    "language": "javascript",
+    "value": "function setup(){\r\n    createCanvas(1200, 700);\r\n    background(256);\r\n}\r\n\r\nfunction draw(){\r\n    var x = 0;\r\n    noStroke();\r\n    fill(255, 222, 0);\r\n\r\n    for(x; x<width; x+=20){\r\n    ellipse(x, 100, 20, 20);\r\n    }\r\n   \r\n}\r\n"
+  },
+  {
+    "kind": 2,
+    "language": "javascript",
+    "value": ""
+  }
+]

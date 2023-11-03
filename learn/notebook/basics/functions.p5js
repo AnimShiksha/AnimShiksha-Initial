@@ -1,0 +1,22 @@
+[
+  {
+    "kind": 1,
+    "language": "markdown",
+    "value": "## without function"
+  },
+  {
+    "kind": 2,
+    "language": "javascript",
+    "value": "var ball = {\r\n    x:300,\r\n    y:200,\r\n    xspeed:4,\r\n    yspeed:-3\r\n};\r\n\r\nfunction setup(){\r\n    createCanvas(600, 400);\r\n}\r\n\r\nfunction draw(){\r\n    background(100);\r\n    stroke(20);\r\n    strokeWeight(2);\r\n    // noFill();\r\n    ellipse(ball.x, ball.y, 20,20);\r\n\r\n    if(ball.x > width || ball.x < 0){\r\n        ball.xspeed = ball.xspeed *-1;\r\n    }\r\n    if(ball.y > height || ball.y < 0){\r\n        ball.yspeed = ball.yspeed * -1;\r\n    }\r\n\r\n    ball.x = ball.x + ball.xspeed;\r\n    ball.y = ball.y + ball.yspeed;\r\n\r\n}"
+  },
+  {
+    "kind": 1,
+    "language": "markdown",
+    "value": "## using function"
+  },
+  {
+    "kind": 2,
+    "language": "javascript",
+    "value": "var ball = {\r\n    x:300,\r\n    y:200,\r\n    xspeed:4,\r\n    yspeed:-3\r\n};\r\n\r\nfunction setup(){\r\n    createCanvas(600, 400);\r\n}\r\n\r\nfunction draw(){\r\n    background(100);\r\n    display();\r\n    bounce();\r\n    move_();\r\n}\r\n\r\nfunction move_(){\r\n    ball.x = ball.x + ball.xspeed;\r\n    ball.y = ball.y + ball.yspeed;\r\n}\r\n\r\nfunction bounce(){\r\n    if(ball.x > width || ball.x < 0){\r\n        ball.xspeed = ball.xspeed *-1;\r\n    }\r\n    if(ball.y > height || ball.y < 0){\r\n        ball.yspeed = ball.yspeed * -1;\r\n    }\r\n}\r\n\r\nfunction display(){\r\n    stroke(20);\r\n    strokeWeight(2);\r\n    // noFill();\r\n    ellipse(ball.x, ball.y, 20,20);\r\n    \r\n}"
+  }
+]

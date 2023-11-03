@@ -1,0 +1,17 @@
+[
+  {
+    "kind": 2,
+    "language": "javascript",
+    "value": "function setup(){\r\n    createCanvas(680, 480);\r\n    background(0,200,100);\r\n}\r\n\r\nfunction draw(){\r\n    fill(0);\r\n    // ellipse(130, 70, 20, 20);\r\n    // ellipse(100, 100, 20, 20);\r\n    // ellipse(150, 100, 20, 20);\r\n    // beginShape();\r\n    fill(255);\r\n    curveVertex(130, 70+100);\r\n    curveVertex(250+0, 70+100);\r\n    curveVertex(250+100, 250+100);\r\n    curveVertex(130+100, 250+100);\r\n    // curveVertex(130, 70);\r\n    // curveVertex(130, 70);\r\n    endShape();\r\n}\r\n\r\n// function draw() {\r\n//     fill(255);\r\n//     beginShape();\r\n//     curveVertex(250, 70);\r\n//     curveVertex(250, 250);\r\n//     curveVertex(130, 250);\r\n//     curveVertex(130, 70);\r\n//     // curveVertex(250, 70);\r\n//     endShape(CLOSE);\r\n//   }\r\n  "
+  },
+  {
+    "kind": 2,
+    "language": "javascript",
+    "value": ""
+  },
+  {
+    "kind": 2,
+    "language": "javascript",
+    "value": ""
+  }
+]

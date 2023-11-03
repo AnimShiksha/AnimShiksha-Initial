@@ -1,0 +1,47 @@
+[
+  {
+    "kind": 2,
+    "language": "javascript",
+    "value": "var points = {\r\n    x:60,\r\n    y:100\r\n};\r\n\r\nvar col = {\r\n    r:255,\r\n    g:0,\r\n    b:0\r\n};\r\n\r\nfunction setup(){\r\n    createCanvas(600, 400);\r\n    // background(col.r , col.g,col.b);\r\n    background(255);\r\n}\r\n\r\nfunction draw(){\r\n    col.r = random(0,255);\r\n    col.g = random(0,255);\r\n    col.b = random(0,255);\r\n    points.x = random([0], [600]);\r\n    points.y= random([0], [600]);\r\n    \r\n    fill(col.r , col.g,col.b,100);\r\n    ellipse(points.x, points.y, 15, 15);\r\n}"
+  },
+  {
+    "kind": 2,
+    "language": "javascript",
+    "value": ""
+  },
+  {
+    "kind": 2,
+    "language": "javascript",
+    "value": ""
+  },
+  {
+    "kind": 2,
+    "language": "javascript",
+    "value": ""
+  },
+  {
+    "kind": 2,
+    "language": "javascript",
+    "value": ""
+  },
+  {
+    "kind": 2,
+    "language": "javascript",
+    "value": ""
+  },
+  {
+    "kind": 2,
+    "language": "javascript",
+    "value": ""
+  },
+  {
+    "kind": 2,
+    "language": "javascript",
+    "value": ""
+  },
+  {
+    "kind": 2,
+    "language": "javascript",
+    "value": ""
+  }
+]

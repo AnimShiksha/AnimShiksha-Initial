@@ -1,0 +1,67 @@
+[
+  {
+    "kind": 1,
+    "language": "markdown",
+    "value": "## Allien"
+  },
+  {
+    "kind": 2,
+    "language": "javascript",
+    "value": "function setup(){\r\n    createCanvas(600, 400);\r\n}\r\n\r\nfunction draw(){\r\n    background(225);\r\n    ellipseMode(CENTER);\r\n    rectMode(CENTER);\r\n\r\n    // head\r\n    rect(240, 145, 20, 100);\r\n\r\n    // body\r\n    ellipse(240, 115, 60, 60);\r\n\r\n    // eyes\r\n    ellipse(221, 115, 16, 32);\r\n    ellipse(259, 115, 16, 32);\r\n\r\n    // legs\r\n    line(230, 195, 220, 205);\r\n    line(250, 195, 260, 205);\r\n\r\n}\r\n\r\n"
+  },
+  {
+    "kind": 1,
+    "language": "markdown",
+    "value": "## Color"
+  },
+  {
+    "kind": 2,
+    "language": "javascript",
+    "value": "function setup(){\r\n    createCanvas(600, 400);\r\n}\r\n\r\nfunction draw(){\r\n    background(232,333,0);\r\n    ellipseMode(CENTER);\r\n    rectMode(CENTER);\r\n\r\n    // body\r\n    fill(255, 0, 0);\r\n    rect(240, 145, 20, 100);\r\n\r\n    // head\r\n    fill(0, 0, 0);\r\n    ellipse(240, 115, 60, 60);\r\n\r\n    // eyes\r\n    fill(255, 222, 0);\r\n    ellipse(221, 115, 16, 32);\r\n    ellipse(259, 115, 16, 32);\r\n\r\n    // legs\r\n    fill(255, 9, 10);\r\n    line(230, 195, 220, 205);\r\n    line(250, 195, 260, 205);\r\n\r\n}\r\n\r\n"
+  },
+  {
+    "kind": 1,
+    "language": "markdown",
+    "value": "## order effect"
+  },
+  {
+    "kind": 2,
+    "language": "javascript",
+    "value": "function setup(){\r\n    createCanvas(600, 400);\r\n}\r\n\r\nfunction draw(){\r\n    background(0,343,444);\r\n    ellipseMode(CENTER);\r\n    rectMode(CENTER);\r\n\r\n   // head\r\n   fill(0, 0, 0);\r\n   ellipse(240, 115, 60, 60);\r\n\r\n    // body\r\n    fill(255, 0, 0);\r\n    rect(240, 145, 20, 100);\r\n\r\n \r\n    // eyes\r\n    fill(255, 222, 0);\r\n    ellipse(221, 115, 16, 32);\r\n    ellipse(259, 115, 16, 32);\r\n\r\n    // legs\r\n    fill(255, 9, 10);\r\n    line(230, 195, 220, 205);\r\n    line(250, 195, 260, 205);\r\n\r\n}\r\n\r\n"
+  },
+  {
+    "kind": 1,
+    "language": "markdown",
+    "value": "## transparancy"
+  },
+  {
+    "kind": 2,
+    "language": "javascript",
+    "value": "function setup(){\r\n    createCanvas(600, 400);\r\n}\r\n\r\nfunction draw(){\r\n    background(232,333,0);\r\n    ellipseMode(CENTER);\r\n    rectMode(CENTER);\r\n\r\n    // body\r\n    fill(100,0,0,100);\r\n    rect(240, 145, 20, 100);\r\n\r\n    // head\r\n    fill(0, 0, 0);\r\n    ellipse(240, 115, 60, 60);\r\n\r\n    // eyes\r\n    fill(255, 222, 0);\r\n    ellipse(221, 115, 16, 32);\r\n    ellipse(259, 115, 16, 32);\r\n\r\n    // legs\r\n    fill(255, 9, 10);\r\n    line(230, 195, 220, 205);\r\n    line(250, 195, 260, 205);\r\n\r\n}"
+  },
+  {
+    "kind": 2,
+    "language": "javascript",
+    "value": ""
+  },
+  {
+    "kind": 2,
+    "language": "javascript",
+    "value": ""
+  },
+  {
+    "kind": 2,
+    "language": "javascript",
+    "value": ""
+  },
+  {
+    "kind": 2,
+    "language": "javascript",
+    "value": ""
+  },
+  {
+    "kind": 2,
+    "language": "javascript",
+    "value": ""
+  }
+]

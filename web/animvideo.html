@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Animation</title>
+    <script src="https://unpkg.com/ml5@latest/dist/ml5.min.js"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/ml5/1.0.0/ml5.min.js"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/p5@1.4.0/lib/p5.js"></script>
+
+    <!-- Face -->
+    <script src="/src/anim/face/eyebrow.js"></script>
+    <script src="/src/anim/face/lips.js"></script>
+    <script src="/src/anim/face/eyes.js"></script>
+    <script src="/src/anim/face/nose.js"></script>
+    <script src="/src/anim/face/hairs.js"></script>
+
+    <!-- Body -->
+    <script src='/src/anim/bodyParts/tummy.js'></script>
+    <script src='/src/anim/bodyParts/hands.js'></script>
+    <script src='/src/anim/bodyParts/legs.js'></script>
+
+    <!-- Clothes -->
+    <script src='/src/anim/clothes/shirt.js'></script>
+    <script src='/src/anim/clothes/shirtHands.js'></script>
+    <script src='/src/anim/clothes/pant.js'></script>
+    <script src='/src/anim/clothes/shoes.js'></script>
+
+    <!-- Main Code. -->
+    <script src='/src/anim/drawFace.js'></script>
+    <script src='/src/anim/drawBody.js'></script>
+    <script src='/src/anim/video.js'></script>
+    
+</head>
+
+<body>
+    <!-- <h1>Anime</h1> -->
+</body>
+</html>
+
+
+beginShape();
+curveVertex(leftElbowX-handWidth, leftElbowY-handWidth);
+curveVertex(leftElbowX+handWidth, leftElbowY+handWidth);
+curveVertex(leftWristX+handWidth, leftWristY+handWidth);
+curveVertex(leftWristX-handWidth, leftWristY-handWidth);
+endShape(CLOSE);
+
+beginShape();
+curveVertex(leftShoulderX-handWidth, leftShoulderY-handWidth);
+curveVertex(leftShoulderX+handWidth, leftShoulderY+handWidth);
+curveVertex(leftElbowX+handWidth, leftElbowY+handWidth);
+curveVertex(leftElbowX-handWidth, leftElbowY-handWidth);
+endShape(CLOSE);

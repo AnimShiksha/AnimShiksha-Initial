@@ -1,0 +1,52 @@
+[
+  {
+    "kind": 2,
+    "language": "javascript",
+    "value": "function setup(){\r\n    createCanvas(1200, 700);\r\n    background(256);\r\n}\r\n\r\nfunction draw(){\r\n    noStroke();\r\n    fill(255, 222, 0);\r\n    if (mouseX > 300){\r\n        background(200,203,0);\r\n    }\r\n    else{\r\n        background(0);\r\n    }\r\n    ellipse(mouseX, mouseY, 16, 16);\r\n}\r\n"
+  },
+  {
+    "kind": 2,
+    "language": "javascript",
+    "value": "var points = {\r\n    x:100,\r\n    y:100\r\n};\r\nvar spd = 5;\r\n\r\nfunction setup(){\r\n    createCanvas(600, 400);\r\n}\r\n\r\nfunction draw(){\r\n    background(255 , 110,0);\r\n    ellipse(points.x, 200, 10, 10);\r\n\r\n    if (points.x == width){\r\n        print('widht reached!');\r\n        spd = -3;\r\n    }\r\n    if ( points.x == 0){\r\n        spd = 3;\r\n    }\r\n    points.x = points.x + spd;\r\n\r\n}"
+  },
+  {
+    "kind": 2,
+    "language": "javascript",
+    "value": ""
+  },
+  {
+    "kind": 1,
+    "language": "markdown",
+    "value": "## making car."
+  },
+  {
+    "kind": 2,
+    "language": "javascript",
+    "value": "var points = {\r\n    x:100,\r\n    y:100\r\n};\r\nvar spd = 5;\r\n\r\nfunction setup(){\r\n    createCanvas(600, 400);\r\n}\r\n\r\nfunction draw(){  \r\n    background(232,333,0);\r\n    ellipseMode(CENTER);\r\n    rectMode(CENTER);\r\n\r\n    // body\r\n    fill(255, 0, 0);\r\n    rect(points.x, 145, 20, 100);\r\n\r\n    // head\r\n    fill(0, 0, 0);\r\n    ellipse(points.x, 115, 60, 60);\r\n\r\n    // eyes\r\n    fill(255, 222, 0);\r\n    ellipse(points.x-19, 115, 16, 32);\r\n    ellipse(points.x +19, 115, 16, 32);\r\n\r\n    // legs\r\n    fill(255, 9, 10);\r\n    line(points.x-10, 195, 220, 205);\r\n    line(points.x-10, 195, 260, 205);\r\n\r\n\r\n    if (points.x == width){\r\n        print('widht reached!');\r\n        spd = -3;\r\n    }\r\n    if (points.x == 0){\r\n        spd = 3;\r\n    }\r\n    if(points.x > width/2){\r\n    background(232,0,0);\r\n    ellipseMode(CENTER);\r\n    rectMode(CENTER);\r\n\r\n    // body\r\n    fill(255, 0, 0);\r\n    rect(points.x, 145, 20, 100);\r\n\r\n    // head\r\n    fill(0, 0, 0);\r\n    ellipse(points.x, 115, 60, 60);\r\n\r\n    // eyes\r\n    fill(255, 222, 0);\r\n    ellipse(points.x-19, 115, 16, 32);\r\n    ellipse(points.x +19, 115, 16, 32);\r\n\r\n    // legs\r\n    fill(255, 9, 10);\r\n    line(points.x-10, 195, 220, 205);\r\n    line(points.x-10, 195, 260, 205);\r\n\r\n\r\n    }\r\n    points.x = points.x + spd;\r\n\r\n}"
+  },
+  {
+    "kind": 1,
+    "language": "markdown",
+    "value": "## mouse cords"
+  },
+  {
+    "kind": 2,
+    "language": "javascript",
+    "value": "var points = {\r\n    x:100,\r\n    y:100\r\n};\r\nvar spd = 5;\r\n\r\nfunction setup(){\r\n    createCanvas(600, 400);\r\n}\r\n\r\nfunction draw(){  \r\n    background(232,333,0);\r\n    ellipseMode(CENTER);\r\n    rectMode(CENTER);\r\n\r\n    // body\r\n    fill(255, 0, 0);\r\n    rect(mouseX, mouseY, 20, 100);\r\n\r\n    // head\r\n    fill(0, 0, 0);\r\n    ellipse(mouseX, mouseY, 60, 60);\r\n\r\n    // eyes\r\n    fill(255, 222, 0);\r\n    ellipse(mouseX-19, mouseY, 16, 32);\r\n    ellipse(mouseX +19, mouseY, 16, 32);\r\n\r\n    // legs\r\n    fill(255, 9, 10);\r\n    line(mouseX-10, mouseY, 220, 205);\r\n    line(mouseX-10, mouseY, 260, 205);\r\n\r\n\r\n    if (mouseX == width){\r\n        print('widht reached!');\r\n        spd = -3;\r\n    }\r\n    if (mouseX == 0){\r\n        spd = 3;\r\n    }\r\n    if(mouseX > width/2){\r\n    background(232,0,0);\r\n    ellipseMode(CENTER);\r\n    rectMode(CENTER);\r\n\r\n    // body\r\n    fill(255, 0, 0);\r\n    rect(mouseX, mouseY, 20, 100);\r\n\r\n    // head\r\n    fill(0, 0, 0);\r\n    ellipse(mouseX, mouseY, 60, 60);\r\n\r\n    // eyes\r\n    fill(255, 222, 0);\r\n    ellipse(mouseX-19, mouseY, 16, 32);\r\n    ellipse(mouseX +19, mouseY, 16, 32);\r\n\r\n    // legs\r\n    fill(255, 9, 10);\r\n    line(mouseX-10, mouseY, 220, 205);\r\n    line(mouseX-10, mouseY, 260, 205);\r\n\r\n\r\n    }\r\n    // mouseX = mouseX + spd;\r\n\r\n}"
+  },
+  {
+    "kind": 2,
+    "language": "javascript",
+    "value": "var x;\r\nfunction setup() {\r\n  createCanvas(400, 400);\r\n}\r\n\r\nfunction draw() {\r\n  textSize(32);\r\n\r\n  x = mouseX;\r\n  y = mouseY;\r\n  background(220);\r\n  rectMode(CENTER);\r\n    fill(110);\r\n  rect(200, 200, 175, 175);\r\n  fill(255, 0, 0);\r\n  rect(200, 200, 150, 150);\r\nfill(0);\r\n  if (x >= 125 && y >= 125 && x <= 275 && y <= 275 && mouseIsPressed) {\r\n    text(\"WHYYY!!!\", 129, 200);\r\n    //make bad explosion\r\n  } else {\r\n    if (x >= 125 && y >= 125 && x <= 275 && y <= 275) {\r\n      text(\"DONT DO IT\", 110, 100);\r\n    } else {\r\n      //opaque rectangle for these two minimums\r\n      //put the rect above the others\r\n      //im gonna have to make the rectangles invidually per case cuz of \"the order\"\r\n      if (mouseIsPressed) {\r\n        text(\"Not funny man\", 90, 70);\r\n      } else {\r\n        textSize(17);\r\n        text(\"This is a very serious environment at at all costs \", 17,50);\r\n        textSize(20);\r\n        text(\"DO NOT PRESS THE BUTTON\", 60,85);\r\n      }\r\n    }\r\n  }\r\n\r\n\r\n\r\n  // textSize(32);\r\n  //  fill(0);\r\n  //  text('DONT TOUCH THE BUTTON',100,50);}\r\n}\r\n"
+  },
+  {
+    "kind": 2,
+    "language": "javascript",
+    "value": ""
+  },
+  {
+    "kind": 2,
+    "language": "javascript",
+    "value": ""
+  }
+]

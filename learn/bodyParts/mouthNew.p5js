@@ -1,0 +1,17 @@
+[
+  {
+    "kind": 1,
+    "language": "markdown",
+    "value": ""
+  },
+  {
+    "kind": 2,
+    "language": "javascript",
+    "value": "function setup(){\r\n    createCanvas(680, 420);\r\n    background(244,243,32);\r\n}\r\n\r\nfunction draw(){\r\n    let x = 200;\r\n    let y = 100;\r\n    let w = 150;\r\n    let h = 140;\r\n    // Upper Face\r\n    fill(100, 22,2);\r\n    ellipse(x, y, w,h);\r\n\r\n    // Mouth\r\n    fill(0, 22,200);\r\n    ellipse(x+w/10,y+h/10,w/2,h/2);\r\n}"
+  },
+  {
+    "kind": 2,
+    "language": "javascript",
+    "value": "function setup() {\r\n    createCanvas(400, 400);\r\n    background(255);\r\n  }\r\n  \r\n  function draw() {\r\n    // Doraemon's face\r\n    fill(255);\r\n    stroke(0);\r\n    ellipse(200, 200, 200, 200);\r\n  \r\n    // Doraemon's eyes\r\n    fill(255);\r\n    stroke(0);\r\n    ellipse(140, 130, 80, 80);\r\n    ellipse(260, 130, 80, 80);\r\n  \r\n    // Doraemon's pupils\r\n    fill(0);\r\n    ellipse(140, 130, 40, 40);\r\n    ellipse(260, 130, 40, 40);\r\n  \r\n    // Doraemon's nose\r\n    fill(255);\r\n    stroke(0);\r\n    ellipse(200, 180, 40, 40);\r\n  \r\n    // Doraemon's mouth\r\n    noFill();\r\n    stroke(3);\r\n    arc(200, 220, 100, 80, 0, PI);\r\n  }\r\n  "
+  }
+]
