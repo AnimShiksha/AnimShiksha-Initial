@@ -8,7 +8,8 @@ class GirlsFace{
         let lips = new GirlsLips();
         let nose = new GirlsNose();
         let cheeks = new GirlCheeks();
-        let hair = new Hairs()
+        let hair = new Hairs();
+        let ears = new GirlsEars();
 
         // http://127.0.0.1:5500/web/girl/girlCamera.html
         // console.log(faceModel.boundingBox);
@@ -35,8 +36,9 @@ class GirlsFace{
         bindi.girlBindi(faceModel.annotations);
         eye.makeEyes(faceModel.annotations);
         nose.girlNose(faceModel.annotations);
-        cheeks.girlsCheeks(faceModel.annotations);
-        lips.girlLips(faceModel.annotations)
+        // cheeks.girlsCheeks(faceModel.annotations);
+        lips.girlLips(faceModel.annotations);
+        // ears.girlEars(faceModel.annotations);
 
         eyeBrow.girlsEyeBrow(faceModel.annotations,bestFitSize/1.5);
       

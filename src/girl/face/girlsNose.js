@@ -11,28 +11,12 @@ class GirlsNose {
       let scaleLeftCorner = scalePoint(leftNoseCorner);
       let scaleRightCorner = scalePoint(rightNoseCorner);
       let scaleBottom = scalePoint(bottomNose);
-  
 
-    //   // Draw the tip of the nose
-    //   ellipse(scaleTip.x, scaleTip.y, 10);
-  
-    //   // Draw the nostrils
-    //   ellipse(scaleLeftCorner.x, scaleLeftCorner.y, 5);
-    //   ellipse(scaleRightCorner.x, scaleRightCorner.y, 5);
-  
-    //   // Draw the bridge of the nose
-    //   beginShape();
-    //   vertex(scaleLeftCorner.x, scaleLeftCorner.y);
-    //   vertex(scaleRightCorner.x, scaleRightCorner.y);
-    //   vertex(scaleTip.x, scaleTip.y);
-    //   endShape(CLOSE);
-  
-    //   // Draw the base of the nose
-    //   beginShape();
-    //   vertex(scaleLeftCorner.x, scaleLeftCorner.y);
-    //   vertex(scaleBottom.x, scaleBottom.y);
-    //   vertex(scaleRightCorner.x, scaleRightCorner.y);
-    //   endShape(CLOSE);
+
+      noFill();
+      stroke(16, 3, 36);
+      strokeWeight(2);
+      ellipse(scaleLeftCorner.x, scaleLeftCorner.y, 30, 30);
 
 
       fill(19, 1, 54);
@@ -42,8 +26,10 @@ class GirlsNose {
       curveVertex(scaleRightCorner.x, scaleRightCorner.y);
       curveVertex(scaleBottom.x, scaleBottom.y);
       curveVertex(scaleLeftCorner.x, scaleLeftCorner.y);
-
       endShape(CLOSE);
     }
+
+
+    
   }
   
