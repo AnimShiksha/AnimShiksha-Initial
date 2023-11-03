@@ -1,0 +1,7 @@
+[
+  {
+    "kind": 2,
+    "language": "javascript",
+    "value": "function setup() {\r\n    createCanvas(640, 480);\r\n    describe('a rotating white cylinder');\r\n    // background(255);    \r\n}\r\n\r\nfunction draw(){\r\n    background(205, 105, 94);\r\n    \r\n    // beginShape();\r\n    // vertex(100, 100);\r\n    // vertex(150, 100);\r\n    // vertex(150, 200);\r\n    // vertex(100, 200);\r\n    // endShape();\r\n\r\n    ellipse(100, 100, 50, 10);\r\n    line(100-50/2, 100, 100-50/2, 200);\r\n    line(100+50/2, 100, 100+50/2, 200);\r\n    ellipse(100, 200, 50, 10);\r\n  \r\n}"
+  }
+]

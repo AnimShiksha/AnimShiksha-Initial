@@ -1,0 +1,82 @@
+[
+  {
+    "kind": 1,
+    "language": "markdown",
+    "value": "## mouseX and mouseY"
+  },
+  {
+    "kind": 2,
+    "language": "javascript",
+    "value": "function setup(){\r\n    createCanvas(1200, 700);\r\n    background(256);\r\n}\r\n\r\nfunction draw(){\r\n    noStroke();\r\n    fill(255, 222, 0);\r\n    ellipse(mouseX, mouseY, 16, 16);\r\n}\r\n\r\n"
+  },
+  {
+    "kind": 2,
+    "language": "javascript",
+    "value": "function setup(){\r\n    createCanvas(1200, 700);\r\n    background(256);\r\n}\r\n\r\nfunction draw(){\r\n    noStroke();\r\n    fill(255, 222, 0);\r\n    ellipse(mouseX, mouseY, 16, 16);\r\n}\r\n\r\nfunction mousePressed(){\r\n    background(244);\r\n}"
+  },
+  {
+    "kind": 1,
+    "language": "markdown",
+    "value": "## moving object."
+  },
+  {
+    "kind": 2,
+    "language": "javascript",
+    "value": "var mouseX_val = 0;\r\nfunction setup(){\r\n    createCanvas(1200, 700);\r\n}\r\n\r\nfunction draw(){\r\n    background(256);\r\n    fill(255, 222, 0);\r\n    ellipse(mouseX_val, 43, 16, 16);\r\n    mouseX_val +=1;\r\n}\r\n\r\n\r\n// function mousePressed(){\r\n//     background(0);\r\n// }"
+  },
+  {
+    "kind": 1,
+    "language": "markdown",
+    "value": "## dictionary"
+  },
+  {
+    "kind": 2,
+    "language": "javascript",
+    "value": "var obj = {\r\n    x:0,\r\n    y:30,\r\n    w:0,\r\n    h:30\r\n};\r\n\r\nfunction setup(){\r\n    createCanvas(1200, 700);\r\n}\r\n\r\nfunction draw(){\r\n    background(256);\r\n    fill(255, 222, 0);\r\n    ellipse(obj.x, obj.y, obj.w,obj.h);\r\n    obj.x += 1;\r\n    // obj.y += 1;\r\n    obj.w += 10;\r\n    // obj.h += 10;\r\n}\r\n\r\n\r\n// function mousePressed(){\r\n//     background(0);\r\n// }"
+  },
+  {
+    "kind": 1,
+    "language": "markdown",
+    "value": "## background color changing"
+  },
+  {
+    "kind": 1,
+    "language": "markdown",
+    "value": "### map function"
+  },
+  {
+    "kind": 2,
+    "language": "javascript",
+    "value": "// var mouseX_val = mouseX;\r\nfunction setup(){\r\n    createCanvas(1200, 700);\r\n}\r\n\r\nfunction draw(){\r\n    r = map(mouseX, 0, 1200, 0, 255);\r\n    g = map(mouseX, 0, 1200, 255, 0);\r\n    b = map(mouseX, 0, 1200, 100, 0);\r\n    background(r,g,b);\r\n    fill(255, 222, 0);\r\n    ellipse(mouseX, mouseY, 16, 16);\r\n    mouseX_val +=1;\r\n}\r\n\r\n\r\n// function mousePressed(){\r\n//     background(0);\r\n// }"
+  },
+  {
+    "kind": 2,
+    "language": "javascript",
+    "value": ""
+  },
+  {
+    "kind": 2,
+    "language": "javascript",
+    "value": ""
+  },
+  {
+    "kind": 2,
+    "language": "javascript",
+    "value": ""
+  },
+  {
+    "kind": 2,
+    "language": "javascript",
+    "value": ""
+  },
+  {
+    "kind": 2,
+    "language": "javascript",
+    "value": ""
+  },
+  {
+    "kind": 2,
+    "language": "javascript",
+    "value": ""
+  }
+]

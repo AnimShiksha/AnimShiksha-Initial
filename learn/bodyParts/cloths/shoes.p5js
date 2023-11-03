@@ -1,0 +1,7 @@
+[
+  {
+    "kind": 2,
+    "language": "javascript",
+    "value": "function setup() {\r\n    createCanvas(1200, 800);\r\n}\r\n\r\nfunction draw(){\r\n    background(200);\r\n        //shoes\r\n    fill(0);\r\n    x = 125;\r\n    y = 530;\r\n    ellipse(x, y, 60, 30);\r\n    ellipse(x+140, y, 60, 30);\r\n    \r\n    rect(x+11,y, y-510, 25);\r\n    ellipse(x-25, y+10, 60, 30);\r\n    rect(x+110, y, 20, 25);\r\n    ellipse(x+160,y+10, 60, 30);\r\n\r\n}"
+  }
+]

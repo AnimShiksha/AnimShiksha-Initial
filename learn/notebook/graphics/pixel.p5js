@@ -1,0 +1,22 @@
+[
+  {
+    "kind": 2,
+    "language": "javascript",
+    "value": "var video;\r\n\r\nfunction setup(){\r\n    createCanvas(600, 400);\r\n    background(232);\r\n    video = createCapture(VIDEO);\r\n    video.size(600,400);\r\n}\r\n\r\nfunction draw(){\r\n    // tint(v1, [v2], [v3], [a])\r\n    image(video, 0, 0);\r\n}\r\n"
+  },
+  {
+    "kind": 2,
+    "language": "javascript",
+    "value": ""
+  },
+  {
+    "kind": 2,
+    "language": "javascript",
+    "value": ""
+  },
+  {
+    "kind": 2,
+    "language": "javascript",
+    "value": ""
+  }
+]

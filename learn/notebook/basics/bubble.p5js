@@ -1,0 +1,77 @@
+[
+  {
+    "kind": 1,
+    "language": "markdown",
+    "value": "## using constructor function"
+  },
+  {
+    "kind": 2,
+    "language": "javascript",
+    "value": "var bubbles = [];\r\nprint(bubbles);\r\nfunction setup() {\r\n    createCanvas(600, 300); \r\n    for (var i = 0; i < 40; i++) {\r\n        bubbles[i] = new Bubble();\r\n        print(bubbles);\r\n    }\r\n}\r\n\r\nfunction draw() {\r\n    background(202,200,0);\r\n    for (var i = 0; i < bubbles.length; i++) {\r\n        bubbles[i].move_();\r\n        bubbles[i].display();\r\n        // print(bubbles);\r\n    }\r\n}\r\n\r\n// I am creating the object.\r\nfunction Bubble() {\r\n    this.x = random(0, width);\r\n    this.y = random(0, height);\r\n\r\n    this.display = function() {\r\n        stroke(0);\r\n        strokeWeight(3);\r\n        noFill();\r\n        ellipse(this.x, this.y, 24, 24);\r\n    };\r\n\r\n    this.move_ = function() {\r\n        this.x = this.x + random(-1,1);\r\n        this.y = this.y + random(-1,1);\r\n    };\r\n}\r\n"
+  },
+  {
+    "kind": 1,
+    "language": "markdown",
+    "value": "## on click random new bubbles"
+  },
+  {
+    "kind": 2,
+    "language": "javascript",
+    "value": "var bubbles = [];\r\nprint(bubbles);\r\nfunction setup() {\r\n    createCanvas(600, 300); \r\n    for (var i = 0; i < 40; i++) {\r\n        bubbles[i] = new Bubble();\r\n        print(bubbles);\r\n    }\r\n}\r\n\r\nfunction draw() {\r\n    background(202,200,0);\r\n    for (var i = 0; i < bubbles.length; i++) {\r\n        bubbles[i].move_();\r\n        bubbles[i].display();\r\n        // print(bubbles);\r\n    }\r\n}\r\n// this push is like append function.\r\nfunction mousePressed(){\r\n    bubbles.push(new Bubble());\r\n}\r\n\r\n// I am creating the object.\r\nfunction Bubble() {\r\n    this.x = random(0, width);\r\n    this.y = random(0, height);\r\n\r\n    this.display = function() {\r\n        stroke(0);\r\n        strokeWeight(3);\r\n        noFill();\r\n        ellipse(this.x, this.y, 24, 24);\r\n    };\r\n\r\n    this.move_ = function() {\r\n        this.x = this.x + random(-1,1);\r\n        this.y = this.y + random(-1,1);\r\n    };\r\n}\r\n"
+  },
+  {
+    "kind": 1,
+    "language": "markdown",
+    "value": "## onclick mouseX and mouseY bubbles"
+  },
+  {
+    "kind": 2,
+    "language": "javascript",
+    "value": "var bubbles = [];\r\nprint(bubbles);\r\nfunction setup() {\r\n    createCanvas(600, 300); \r\n    for (var i = 0; i < 40; i++) {\r\n        bubbles[i] = new Bubble(random(width),random(height));\r\n        print(bubbles);\r\n    }\r\n}\r\n\r\nfunction draw() {\r\n    background(202,200,0);\r\n    for (var i = 0; i < bubbles.length; i++) {\r\n        bubbles[i].move_();\r\n        bubbles[i].display();\r\n        // print(bubbles);\r\n    }\r\n}\r\n// this push is like append function.\r\nfunction mousePressed(){\r\n    bubbles.push(new Bubble(x= mouseX,y= mouseY));\r\n}\r\n\r\n// I am creating the object.\r\nfunction Bubble(x,y) {\r\n    this.x = x;\r\n    this.y = y;\r\n\r\n    this.display = function() {\r\n        stroke(0);\r\n        strokeWeight(3);\r\n        noFill();\r\n        ellipse(this.x, this.y, 24, 24);\r\n    };\r\n\r\n    this.move_ = function() {\r\n        this.x = this.x + random(-1,1);\r\n        this.y = this.y + random(-1,1);\r\n    };\r\n}\r\n"
+  },
+  {
+    "kind": 1,
+    "language": "markdown",
+    "value": "## mouse Dragged function"
+  },
+  {
+    "kind": 2,
+    "language": "javascript",
+    "value": "var bubbles = [];\r\nprint(bubbles);\r\nfunction setup() {\r\n    createCanvas(600, 300); \r\n    for (var i = 0; i < 40; i++) {\r\n        // bubbles[i] = new Bubble(random(width),random(height));\r\n        print(bubbles);\r\n    }\r\n}\r\n\r\nfunction draw() {\r\n    background(202,200,0);\r\n    for (var i = 0; i < bubbles.length; i++) {\r\n        bubbles[i].move_();\r\n        bubbles[i].display();\r\n        // print(bubbles);\r\n    }\r\n}\r\n// this push is like append function.\r\nfunction mouseDragged(){\r\n    bubbles.push(new Bubble(x= mouseX,y= mouseY));\r\n}\r\n\r\n// I am creating the object.\r\nfunction Bubble(x,y) {\r\n    this.x = x;\r\n    this.y = y;\r\n\r\n    this.display = function() {\r\n        stroke(0);\r\n        strokeWeight(3);\r\n        noFill();\r\n        ellipse(this.x, this.y, 24, 24);\r\n    };\r\n\r\n    this.move_ = function() {\r\n        this.x = this.x + random(-1,1);\r\n        this.y = this.y + random(-1,1);\r\n    };\r\n}\r\n"
+  },
+  {
+    "kind": 1,
+    "language": "markdown",
+    "value": "## removing the pervious bubbles"
+  },
+  {
+    "kind": 1,
+    "language": "markdown",
+    "value": "### **this didn't work**"
+  },
+  {
+    "kind": 2,
+    "language": "javascript",
+    "value": "var bubbles = [];\r\nprint(bubbles);\r\nfunction setup() {\r\n    createCanvas(600, 300); \r\n    for (var i = 0; i < 40; i++) {\r\n        // bubbles[i] = new Bubble(random(width),random(height));\r\n        print(bubbles);\r\n    }\r\n}\r\n\r\nfunction draw() {\r\n    background(202,200,0);\r\n    for (var i = 0; i < bubbles.length; i++) {\r\n        bubbles[i].move_();\r\n        bubbles[i].display();\r\n        // print(bubbles);\r\n    }\r\n}\r\n// this push is like append function.\r\nfunction mouseDragged(){\r\n    if (bubbles.length <=50){\r\n        bubbles.push(new Bubble(x= mouseX,y= mouseY));\r\n    }\r\n}\r\n\r\n// I am creating the object.\r\nfunction Bubble(x,y) {\r\n    this.x = x;\r\n    this.y = y;\r\n\r\n    this.display = function() {\r\n        stroke(0);\r\n        strokeWeight(3);\r\n        noFill();\r\n        ellipse(this.x, this.y, 24, 24);\r\n    };\r\n\r\n    this.move_ = function() {\r\n        this.x = this.x + random(-1,1);\r\n        this.y = this.y + random(-1,1);\r\n    };\r\n}\r\n"
+  },
+  {
+    "kind": 1,
+    "language": "markdown",
+    "value": "## **worked using splice function**"
+  },
+  {
+    "kind": 2,
+    "language": "javascript",
+    "value": "var bubbles = [];\r\nprint(bubbles);\r\nfunction setup() {\r\n    createCanvas(600, 300); \r\n    for (var i = 0; i < 40; i++) {\r\n        // bubbles[i] = new Bubble(random(width),random(height));\r\n        print(bubbles);\r\n    }\r\n}\r\n\r\nfunction draw() {\r\n    background(202,200,0);\r\n    for (var i = 0; i < bubbles.length; i++) {\r\n        bubbles[i].move_();\r\n        bubbles[i].display();\r\n        // print(bubbles);\r\n    }\r\n    if (bubbles.length > 50){\r\n        bubbles.splice(0,1);\r\n    }\r\n}\r\n\r\n// this push is like append function.\r\nfunction mouseClicked(){\r\n    background(202,200,0);\r\n}\r\n\r\nfunction mouseDragged(){\r\n    bubbles.push(new Bubble(x= mouseX,y= mouseY));\r\n}\r\n\r\n// I am creating the object.\r\nfunction Bubble(x,y) {\r\n    this.x = x;\r\n    this.y = y;\r\n\r\n    this.display = function() {\r\n        stroke(0);\r\n        strokeWeight(3);\r\n        noFill();\r\n        ellipse(this.x, this.y, 24, 24);\r\n    };\r\n\r\n    this.move_ = function() {\r\n        this.x = this.x + random(-1,1);\r\n        this.y = this.y + random(-1,1);\r\n    };\r\n}\r\n"
+  },
+  {
+    "kind": 2,
+    "language": "javascript",
+    "value": ""
+  },
+  {
+    "kind": 2,
+    "language": "javascript",
+    "value": ""
+  }
+]

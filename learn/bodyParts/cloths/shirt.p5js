@@ -1,0 +1,7 @@
+[
+  {
+    "kind": 2,
+    "language": "javascript",
+    "value": "function setup() {\r\n    createCanvas(400, 400);\r\n  }\r\n  \r\n  function draw() {\r\n    background(220);\r\n  \r\n    // Draw the shirt body\r\n    fill(255, 0, 0); // Red color for the shirt\r\n    stroke(0); // Black outline\r\n    rect(100, 200, 200, 200);\r\n  \r\n    // Draw the collar\r\n    fill(255); // White collar\r\n    beginShape();\r\n    vertex(200, 100);\r\n    vertex(150, 200);\r\n    vertex(250, 200);\r\n    endShape(CLOSE);\r\n  \r\n    // Draw the left sleeve\r\n    fill(255, 0, 0); // Red color for the sleeve\r\n    beginShape();\r\n    vertex(100, 200);\r\n    vertex(70, 250);\r\n    vertex(150, 250);\r\n    endShape(CLOSE);\r\n  \r\n    // Draw the right sleeve\r\n    beginShape();\r\n    vertex(300, 200);\r\n    vertex(250, 250);\r\n    vertex(330, 250);\r\n    endShape(CLOSE);\r\n  \r\n    // Draw buttons\r\n    fill(0); // Black buttons\r\n    for (let i = 0; i < 4; i++) {\r\n      ellipse(200, 140 + i * 30, 10, 10);\r\n    }\r\n  }\r\n  "
+  }
+]

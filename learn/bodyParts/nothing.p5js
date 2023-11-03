@@ -1,0 +1,7 @@
+[
+  {
+    "kind": 2,
+    "language": "javascript",
+    "value": "// var x;\r\n// var y;\r\nvar arrX = [];\r\nvar arrY = [];\r\n\r\nfunction setup() {\r\n    createCanvas(680, 460);\r\n    background(255);\r\n}\r\n\r\nfunction draw() {\r\n    fill(42, 3, 121);\r\n    ellipse(x, y, 30, 30);\r\n}\r\n\r\nfunction mouseDragged() {\r\n    // x = mouseX;\r\n    // y = mouseY;\r\n    arrX.push(mouseX);\r\n    arrY.push(mouseY);\r\n}\r\n\r\nfunction draw() {\r\n    beginShape();\r\n    fill(42, 3, 121);\r\n    stroke(0); // Set the stroke color\r\n    for (var i = 0; i < arrX.length; i++) {\r\n        curveVertex(arrX[i], arrY[i]);\r\n    }\r\n    endShape();\r\n}\r\n"
+  }
+]
