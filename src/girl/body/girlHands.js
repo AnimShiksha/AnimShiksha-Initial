@@ -16,25 +16,11 @@ class GirlsHands{
         let rightShoulderX = pose_.rightShoulder.x;
         let rightShoulderY = pose_.rightShoulder.y;
 
-        // stroke(23);
-        // strokeWeight(5);
-        // line(leftShoulderX, leftShoulderY, leftElbowX, leftElbowY);
-        // line(rightShoulderX, rightShoulderY, rightElbowX, rightElbowY);
-
-        // // // strokeWeight(5);
-        // line(leftElbowX,leftElbowY,leftWristX,leftWristY);
-        // line(rightElbowX,rightElbowY,rightWristX,rightWristY);   
-
-
-        // let handWidth = 10
-        
-        // Fat Hand
-
         // Left hand
 
         fill(255, 204, 153); // Skin color
-        // stroke(67, 13, 214);
-        // strokeWeight(3);
+        stroke(67, 13, 214);
+        strokeWeight(3);
         beginShape();
         curveVertex(leftShoulderX+leftShoulderX/handWidth, leftShoulderY-leftShoulderY/handWidth);
         curveVertex(leftShoulderX-leftShoulderX/handWidth, leftShoulderY+leftShoulderY/handWidth);
@@ -43,7 +29,7 @@ class GirlsHands{
         endShape(CLOSE);
 
 
-        // Fat Hand
+        // Right Hand
         beginShape();
         curveVertex(rightShoulderX+rightShoulderX/handWidth, rightShoulderY+rightShoulderY/handWidth);
         curveVertex(rightShoulderX-rightShoulderX/handWidth, rightShoulderY-rightShoulderY/handWidth);
@@ -54,6 +40,14 @@ class GirlsHands{
                 
         // ellipse(leftElbowX, leftElbowY, handSize, handSize);
         // ellipse(rightElbowX, rightElbowY, handSize, handSize);
+
+
+        // beginShape();
+        // vertex(leftShoulderX+leftShoulderX/handWidth, leftShoulderY-leftShoulderY/handWidth);
+        // quadraticVertex(leftShoulderX+leftShoulderX/handWidth, leftShoulderY-leftShoulderY/handWidth,leftShoulderX-leftShoulderX/handWidth, leftShoulderY+leftShoulderY/handWidth);
+        // quadraticVertex(leftElbowX-leftElbowX/handWidth, leftElbowY+leftElbowY/handWidth,leftElbowX+leftElbowX/handWidth, leftElbowY-leftElbowY/handWidth);
+
+        // endShape(CLOSE)
     }
 
 
@@ -69,6 +63,11 @@ class GirlsHands{
 
         let rightElbowX = pose_.rightElbow.x;
         let rightElbowY = pose_.rightElbow.y;
+
+                      
+        let leftShoulderX = pose_.leftShoulder.x;
+        let leftShoulderY = pose_.leftShoulder.y;
+        
 
 
         fill(255, 204, 153); // Skin color
@@ -90,9 +89,31 @@ class GirlsHands{
 
         
 
-        fill(0,222,22);
-        // ellipse(leftWristX,leftWristY,handSize,handSize);
-        // ellipse(rightWristX,rightWristY,handSize,handSize);
+        // fill(0,222,22);
+
+
+        // Left Hand
+        // blend();
+        // beginShape();
+        // vertex(leftWristX+leftWristX/handWidth, leftWristY-leftWristY/handWidth);
+        // // vertex(leftShoulderX+leftShoulderX/handWidth, leftShoulderY-leftShoulderY/handWidth);
+        // quadraticVertex(leftElbowX+leftElbowX/handWidth, leftElbowY-leftElbowY/handWidth,leftElbowX-leftElbowX/handWidth, leftElbowY+leftElbowY/handWidth);
+        // quadraticVertex(leftWristX-leftWristX/handWidth, leftWristY+leftWristY/handWidth,leftWristX+leftWristX/handWidth, leftWristY-leftWristY/handWidth);
+
+        // quadraticVertex(leftShoulderX+leftShoulderX/handWidth, leftShoulderY-leftShoulderY/handWidth,leftShoulderX-leftShoulderX/handWidth, leftShoulderY+leftShoulderY/handWidth);
+        // quadraticVertex(leftElbowX-leftElbowX/handWidth, leftElbowY+leftElbowY/handWidth,leftElbowX+leftElbowX/handWidth, leftElbowY-leftElbowY/handWidth);
+
+        // endShape(CLOSE);
+
+
+        // beginShape();
+        // vertex(rightElbowX+rightElbowX/handWidth, rightElbowY+rightElbowY/handWidth);
+        // quadraticVertex(rightElbowX+rightElbowX/handWidth, rightElbowY+rightElbowY/handWidth,rightElbowX-rightElbowX/handWidth, rightElbowY-rightElbowY/handWidth);
+        // quadraticVertex(rightWristX-rightWristX/handWidth, rightWristY-rightWristY/handWidth,rightWristX+rightWristX/handWidth, rightWristY+rightWristY/handWidth);
+
+        endShape(CLOSE);
+        ellipse(leftWristX,leftWristY,handSize,handSize);
+        ellipse(rightWristX,rightWristY,handSize,handSize);
 
 
     }
