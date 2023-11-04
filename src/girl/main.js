@@ -55,6 +55,7 @@ function modelReady() {
 
 function draw() {
   background(242, 211, 10);
+  // image(video, 0, 0)
   if(predictions.length){
       // Hair Image is Not Working.
       let hairPoints = predictions[0].annotations.silhouette[32]
