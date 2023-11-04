@@ -33,5 +33,6 @@ class GirlHairs{
         }
       }
       endShape(CLOSE);
+      
     }
 }
