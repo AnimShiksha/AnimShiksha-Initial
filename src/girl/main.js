@@ -2,21 +2,10 @@ let facemesh;
 let poseNet;
 let video;
 let predictions = [];
-let drawface_;
+let girlsface_;
 let drawbody_;
 let pose_;
 let poses;
-let constraints = {
-  video: {
-    mandatory: {
-      minWidth: 1280,
-      minHeight: 720
-    },
-    optional: [{ maxFrameRate: 10 }]
-  },
-//   audio: true
-};
-
 let backgroundIMG;
 
 
@@ -31,11 +20,10 @@ function setup() {
   poseNet = ml5.poseNet(video, modelLoaded);
   poseNet.on('pose',gotPose);
 
-  backgroundIMG = loadImage('artifacts/moon.avif')
   // video.size(480,360);
 
-  drawface_ = new DrawFace();
-  drawbody_ = new DrawBody()
+  girlsface_ = new GirlsFace();
+  // drawbody_ = new DrawBody()
 
 }
 
@@ -57,16 +45,15 @@ function modelReady() {
 }
 
 function draw() {
-  // background(242, 211, 10);
-  background(backgroundIMG,0,0)
+  background(242, 211, 10);
   if(predictions.length){
     if(poses){
       drawNeck()
      }
-    drawface_.drawFace(predictions[0]);
+    girlsface_.girlsFace(predictions[0]);
   }
   if(poses){
-    drawbody_.drawBody(poses);
+    // drawbody_.drawBody(poses);
   }
 }
 

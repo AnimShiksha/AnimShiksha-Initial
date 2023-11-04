@@ -57,11 +57,11 @@ class ShirtHands{
         curveVertex(rightShoulderX-handWidth, rightShoulderY-handWidth);
         endShape(CLOSE);
 
-        fill(0,222,22);
-        ellipse(leftWristX,leftWristY,shirtHandsize,shirtHandsize);
-        ellipse(rightWristX,rightWristY,shirtHandsize,shirtHandsize);
-        ellipse(leftElbowX, leftElbowY, shirtHandsize, shirtHandsize);
-        ellipse(rightElbowX, rightElbowY, shirtHandsize, shirtHandsize);
+        // fill(0,222,22);
+        // ellipse(leftWristX,leftWristY,shirtHandsize,shirtHandsize);
+        // ellipse(rightWristX,rightWristY,shirtHandsize,shirtHandsize);
+        // ellipse(leftElbowX, leftElbowY, shirtHandsize, shirtHandsize);
+        // ellipse(rightElbowX, rightElbowY, shirtHandsize, shirtHandsize);
 
 
 
