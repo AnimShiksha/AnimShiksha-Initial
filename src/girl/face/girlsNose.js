@@ -27,9 +27,6 @@ class GirlsNose {
       curveVertex(scaleBottom.x, scaleBottom.y);
       curveVertex(scaleLeftCorner.x, scaleLeftCorner.y);
       endShape(CLOSE);
-    }
-
-
-    
-  }
+    }    
+}
   

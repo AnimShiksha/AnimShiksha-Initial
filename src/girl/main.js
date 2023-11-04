@@ -4,10 +4,11 @@ let video;
 let predictions = [];
 let girlsface_;
 let drawbody_;
+let girlsBody_;
 let pose_;
 let poses;
 let backgroundIMG;
-
+let hairIMG_;
 
 function setup() {
   createCanvas(1280, 720);
@@ -20,10 +21,12 @@ function setup() {
   poseNet = ml5.poseNet(video, modelLoaded);
   poseNet.on('pose',gotPose);
 
+  hairIMG_ = loadImage('artifacts/girlHairs.jpg',imageLoaded);
+
   // video.size(480,360);
 
   girlsface_ = new GirlsFace();
-  // drawbody_ = new DrawBody()
+  girlsBody_ = new GirlsBody();
 
 }
 
@@ -40,6 +43,12 @@ function modelLoaded() {
 }
 
 
+function imageLoaded() {
+  console.log('Image Loaded!🤚🏻');
+}
+
+
+
 function modelReady() {
   console.log("FaceMesh Ready!🤚🏻");
 }
@@ -47,13 +56,17 @@ function modelReady() {
 function draw() {
   background(242, 211, 10);
   if(predictions.length){
+      // Hair Image is Not Working.
+      let hairPoints = predictions[0].annotations.silhouette[32]
+      image(hairIMG_, scalePoint(hairPoints).x, scalePoint(hairPoints).y, 250, 250)
     if(poses){
       drawNeck()
      }
     girlsface_.girlsFace(predictions[0]);
+
   }
   if(poses){
-    // drawbody_.drawBody(poses);
+    girlsBody_.girlsBody(poses);
   }
 }
 
