@@ -35,8 +35,8 @@ class GirlsFace{
 
         hair.girlsHair(faceOutline,bestFitSize/0.7)      
         bindi.girlBindi(faceModel.annotations);
-        eye.makeEyes(faceModel.annotations);
-        nose.girlNose(faceModel.annotations);
+        eye.makeEyes(faceModel.annotations,bestFitSize/3);
+        nose.girlNose(faceModel.annotations,0,bestFitSize/1.2);
         // cheeks.girlsCheeks(faceModel.annotations);
         lips.girlLips(faceModel.annotations);
         // ears.girlEars(faceModel.annotations);

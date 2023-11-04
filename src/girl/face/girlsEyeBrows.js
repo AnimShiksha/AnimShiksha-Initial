@@ -5,7 +5,7 @@ class GirlsEyeBrow{
       let leftEyeBrow = eyeBrowLandmarks.leftEyebrowUpper
       noFill();
       stroke(0);
-      strokeWeight(4);
+      strokeWeight(2);
       beginShape();
       for(let i of leftEyeBrow){
         // line(scalePoint(i).x, scalePoint(i).y,scalePoint(i).x, scalePoint(i).y-eyeBrowsSize)
