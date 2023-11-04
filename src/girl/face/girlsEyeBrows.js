@@ -3,10 +3,10 @@ class GirlsEyeBrow{
   
     girlsEyeBrow(eyeBrowLandmarks,eyeBrowsSize){
       let leftEyeBrow = eyeBrowLandmarks.leftEyebrowUpper
-      noFill();
-      stroke(0);
+      fill(0);
+      // stroke(0);
       smooth();
-      strokeWeight(2);
+      // strokeWeight(2);
       beginShape();
       // for(let i of leftEyeBrow){
       for(let i=0;i<leftEyeBrow.length;i++){
