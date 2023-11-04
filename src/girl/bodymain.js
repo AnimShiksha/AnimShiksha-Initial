@@ -6,9 +6,8 @@ class GirlsBody{
         let girlHands = new GirlsHands();
 
         girlTummy_.girlTummy(bodyPoses,20,10);
-        girlHands.girlsHandsElbowToWrist(bodyPoses,20,20);
         girlHands.girlsHandsShoulderToElbow(bodyPoses,20,20);
-        
+        girlHands.girlsHandsElbowToWrist(bodyPoses,20,20);
 
         
     }
