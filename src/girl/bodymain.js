@@ -15,7 +15,6 @@ class GirlsBody{
         girlHands.girlsHandsShoulderToElbow(bodyPoses,20,handScaling);
         girlHands.girlsHandsElbowToWrist(bodyPoses,20,handScaling);
         girlPant.girlsPant(bodyPoses,20,20)
-
         
     }
 }
