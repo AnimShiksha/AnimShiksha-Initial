@@ -4,6 +4,7 @@ let video;
 let predictions = [];
 let girlsface_;
 let drawbody_;
+let girlsBody_;
 let pose_;
 let poses;
 let backgroundIMG;
@@ -20,12 +21,12 @@ function setup() {
   poseNet = ml5.poseNet(video, modelLoaded);
   poseNet.on('pose',gotPose);
 
-  hairIMG_ = loadImage('artifacts/MyImgcroped.jpg',imageLoaded);
+  hairIMG_ = loadImage('artifacts/girlHairs.jpg',imageLoaded);
 
   // video.size(480,360);
 
   girlsface_ = new GirlsFace();
-  // drawbody_ = new DrawBody()
+  girlsBody_ = new GirlsBody();
 
 }
 
@@ -55,16 +56,17 @@ function modelReady() {
 function draw() {
   background(242, 211, 10);
   if(predictions.length){
+      // Hair Image is Not Working.
+      let hairPoints = predictions[0].annotations.silhouette[32]
+      image(hairIMG_, scalePoint(hairPoints).x, scalePoint(hairPoints).y, 250, 250)
     if(poses){
       drawNeck()
      }
     girlsface_.girlsFace(predictions[0]);
-    // Hair Image is Not Working.
-    let hairPoints = predictions[0].annotations.silhouette[0]
-    image(hairIMG_, scalePoint(hairPoints).x, scalePoint(hairPoints).y, 30, 30)
+
   }
   if(poses){
-    // drawbody_.drawBody(poses);
+    girlsBody_.girlsBody(poses);
   }
 }
 
