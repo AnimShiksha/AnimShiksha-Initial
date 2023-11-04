@@ -57,7 +57,7 @@ function modelReady() {
 }
 
 function draw() {
-  // background(242, 211, 10);
+  background(242, 211, 10);
   background(backgroundIMG,0,0)
   if(predictions.length){
     if(poses){
