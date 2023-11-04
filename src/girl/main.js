@@ -59,7 +59,7 @@ function draw() {
   if(predictions.length){
       // Hair Image is Not Working.
       let hairPoints = predictions[0].annotations.silhouette[32]
-      image(hairIMG_, scalePoint(hairPoints).x, scalePoint(hairPoints).y, 250, 250)
+      // image(hairIMG_, scalePoint(hairPoints).x, scalePoint(hairPoints).y, 250, 250)
     if(poses){
       drawNeck()
      }

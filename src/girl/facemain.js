@@ -33,6 +33,7 @@ class GirlsFace{
         // console.log(faceModel.annotations)
 
 
+        hair.girlsHair(faceOutline,bestFitSize/0.7)      
         bindi.girlBindi(faceModel.annotations);
         eye.makeEyes(faceModel.annotations);
         nose.girlNose(faceModel.annotations);
@@ -41,7 +42,6 @@ class GirlsFace{
         // ears.girlEars(faceModel.annotations);
 
         eyeBrow.girlsEyeBrow(faceModel.annotations,bestFitSize/1.5);
-        // hair.girlsHair(faceModel.annotations,hairIMG_)      
         
       }      
 }
