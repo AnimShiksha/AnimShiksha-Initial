@@ -1,7 +1,7 @@
 class GirlsNose {
     constructor() {}
   
-    girlNose(Landmarks) {
+    girlNose(Landmarks,noseSize,noseRingSize) {
       let tipNose = Landmarks.noseTip[0];
       let leftNoseCorner = Landmarks.noseLeftCorner[0];
       let rightNoseCorner = Landmarks.noseRightCorner[0];
@@ -16,17 +16,18 @@ class GirlsNose {
       noFill();
       stroke(16, 3, 36);
       strokeWeight(2);
-      ellipse(scaleLeftCorner.x, scaleLeftCorner.y, 30, 30);
-
-
+      ellipse(scaleLeftCorner.x+noseSize, scaleLeftCorner.y+noseSize,noseRingSize);
+      
+      
       fill(19, 1, 54);
       beginShape();
-      curveVertex(scaleLeftCorner.x, scaleLeftCorner.y);
-      curveVertex(scaleTip.x, scaleTip.y);
-      curveVertex(scaleRightCorner.x, scaleRightCorner.y);
-      curveVertex(scaleBottom.x, scaleBottom.y);
-      curveVertex(scaleLeftCorner.x, scaleLeftCorner.y);
+      curveVertex(scaleLeftCorner.x+noseSize, scaleLeftCorner.y+noseSize);
+      curveVertex(scaleTip.x+noseSize, scaleTip.y+noseSize);
+      curveVertex(scaleRightCorner.x+noseSize, scaleRightCorner.y+noseSize);
+      curveVertex(scaleBottom.x+noseSize, scaleBottom.y+noseSize);
+      curveVertex(scaleLeftCorner.x+noseSize, scaleLeftCorner.y+noseSize);
       endShape(CLOSE);
+
     }    
 }
   

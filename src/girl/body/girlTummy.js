@@ -7,8 +7,8 @@ class GirlsTummy {
       // let tummyUP = 3
       let leftShoulder = (pose_.leftShoulder);
       let rightShoulder = (pose_.rightShoulder);
-      let leftHip = (pose_.leftHip)
-      let rightHip = (pose_.rightHip)
+      let leftHip = (pose_.leftHip);
+      let rightHip = (pose_.rightHip);
 
       // let midx = (leftShoulder.x + rightShoulder.x)/2
       // let midy = (leftShoulder.y + rightShoulder.y)/2

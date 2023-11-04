@@ -65,6 +65,7 @@ class GirlsHands{
         curveVertex(leftWrist.x+handWidth, leftWrist.y-handWidth);
         endShape(CLOSE);
 
+
         beginShape();
         curveVertex(rightWrist.x+handWidth, rightWrist.y+handWidth);
         curveVertex(rightElbow.x+handWidth, rightElbow.y+handWidth);
@@ -72,7 +73,8 @@ class GirlsHands{
         curveVertex(rightElbow.x-handWidth,rightElbow.y-handWidth);
         curveVertex(rightWrist.x-handWidth,rightWrist.y-handWidth);       
 
-        endShape(CLOSE);       
+        endShape(CLOSE);     
+
 
     }
 }
