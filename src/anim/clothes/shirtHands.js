@@ -35,7 +35,7 @@ class ShirtHands{
 
         fill(33, 9, 56);
         stroke(0);
-        strokeWeight(2);
+        strokeWeight(2); 
         beginShape();
         curveVertex(leftShoulderX-handWidth, leftShoulderY+handWidth);
         curveVertex(leftmidx-handWidth, leftmidy+handWidth);

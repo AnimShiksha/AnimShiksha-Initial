@@ -1,120 +1,78 @@
 class GirlsHands{
     constructor(){}
-
-
     girlsHandsShoulderToElbow(pose_,handSize,handWidth){
-        // hands
-        let leftElbowX = pose_.leftElbow.x;
-        let leftElbowY = pose_.leftElbow.y;
+        let leftElbow = pose_.leftElbow;
+        let rightElbow = pose_.rightElbow;
 
-        let rightElbowX = pose_.rightElbow.x;
-        let rightElbowY = pose_.rightElbow.y;
+        let leftShoulder = pose_.leftShoulder;
+        let rightShoulder = pose_.rightShoulder;
 
-              
-        let leftShoulderX = pose_.leftShoulder.x;
-        let leftShoulderY = pose_.leftShoulder.y;
-        let rightShoulderX = pose_.rightShoulder.x;
-        let rightShoulderY = pose_.rightShoulder.y;
+        let leftWrist = pose_.leftWrist;
+        let rightWrist = pose_.rightWrist;
 
-        // Left hand
-
-        fill(255, 204, 153); // Skin color
-        stroke(67, 13, 214);
-        strokeWeight(3);
+        fill(24, 92, 201);
+        stroke(2);
+        strokeWeight(2);
+        smooth();
+        // strokeJoin(BEVEL)
         beginShape();
-        curveVertex(leftShoulderX+leftShoulderX/handWidth, leftShoulderY-leftShoulderY/handWidth);
-        curveVertex(leftShoulderX-leftShoulderX/handWidth, leftShoulderY+leftShoulderY/handWidth);
-        curveVertex(leftElbowX-leftElbowX/handWidth, leftElbowY+leftElbowY/handWidth);
-        curveVertex(leftElbowX+leftElbowX/handWidth, leftElbowY-leftElbowY/handWidth);
+        curveVertex(leftShoulder.x-handWidth, leftShoulder.y+handWidth);
+        curveVertex(leftElbow.x-handWidth,leftElbow.y+handWidth);
+
+
+        // Add wrists.
+        // curveVertex(leftWrist.x-handWidth,leftWrist.y+handWidth);
+        // curveVertex(leftWrist.x+handWidth,leftWrist.y-handWidth);
+
+
+        curveVertex(leftElbow.x+handWidth,leftElbow.y-handWidth);
+        curveVertex(leftShoulder.x+handWidth, leftShoulder.y-handWidth);
         endShape(CLOSE);
 
-
-        // Right Hand
         beginShape();
-        curveVertex(rightShoulderX+rightShoulderX/handWidth, rightShoulderY+rightShoulderY/handWidth);
-        curveVertex(rightShoulderX-rightShoulderX/handWidth, rightShoulderY-rightShoulderY/handWidth);
-        curveVertex(rightElbowX-rightElbowX/handWidth, rightElbowY-rightElbowY/handWidth);
-        curveVertex(rightElbowX+rightElbowX/handWidth, rightElbowY+rightElbowY/handWidth);
+        curveVertex(rightShoulder.x+handWidth, rightShoulder.y+handWidth);
+        curveVertex(rightElbow.x+handWidth, rightElbow.y+handWidth);
+
+        // add writs
+        // curveVertex(rightWrist.x+handWidth,rightWrist.y+handWidth);
+        // curveVertex(rightWrist.x-handWidth,rightWrist.y-handWidth);
+
+        curveVertex(rightElbow.x-handWidth,rightElbow.y-handWidth);
+        curveVertex(rightShoulder.x-handWidth,rightShoulder.y-handWidth);       
+
         endShape(CLOSE);
 
-                
-        // ellipse(leftElbowX, leftElbowY, handSize, handSize);
-        // ellipse(rightElbowX, rightElbowY, handSize, handSize);
-
-
-        // beginShape();
-        // vertex(leftShoulderX+leftShoulderX/handWidth, leftShoulderY-leftShoulderY/handWidth);
-        // quadraticVertex(leftShoulderX+leftShoulderX/handWidth, leftShoulderY-leftShoulderY/handWidth,leftShoulderX-leftShoulderX/handWidth, leftShoulderY+leftShoulderY/handWidth);
-        // quadraticVertex(leftElbowX-leftElbowX/handWidth, leftElbowY+leftElbowY/handWidth,leftElbowX+leftElbowX/handWidth, leftElbowY-leftElbowY/handWidth);
-
-        // endShape(CLOSE)
     }
 
 
     girlsHandsElbowToWrist(pose_,handSize,handWidth){
-        let leftWristX = pose_.leftWrist.x;
-        let leftWristY = pose_.leftWrist.y;
-        
-        let rightWristX = pose_.rightWrist.x;
-        let rightWristY = pose_.rightWrist.y;
+        let leftWrist = pose_.leftWrist;
+        let rightWrist = pose_.rightWrist;
 
-        let leftElbowX = pose_.leftElbow.x;
-        let leftElbowY = pose_.leftElbow.y;
+        let leftElbow = pose_.leftElbow;
+        let rightElbow = pose_.rightElbow;
 
-        let rightElbowX = pose_.rightElbow.x;
-        let rightElbowY = pose_.rightElbow.y;
-
-                      
-        let leftShoulderX = pose_.leftShoulder.x;
-        let leftShoulderY = pose_.leftShoulder.y;
-        
-
-
-        fill(255, 204, 153); // Skin color
+        fill(24, 92, 21);
+        stroke(2);
+        strokeWeight(2);
+        smooth();
+        // strokeJoin(BEVEL)
         beginShape();
-        curveVertex(leftElbowX+leftElbowX/handWidth, leftElbowY-leftElbowY/handWidth);
-        curveVertex(leftElbowX-leftElbowX/handWidth, leftElbowY+leftElbowY/handWidth);
-        curveVertex(leftWristX-leftWristX/handWidth, leftWristY+leftWristY/handWidth);
-        curveVertex(leftWristX+leftWristX/handWidth, leftWristY-leftWristY/handWidth);
+        curveVertex(leftWrist.x-handWidth, leftWrist.y+handWidth);
+        curveVertex(leftElbow.x-handWidth,leftElbow.y+handWidth);
+
+        curveVertex(leftElbow.x+handWidth,leftElbow.y-handWidth);
+        curveVertex(leftWrist.x+handWidth, leftWrist.y-handWidth);
         endShape(CLOSE);
 
-        // Right Hand
-                
         beginShape();
-        curveVertex(rightElbowX+rightElbowX/handWidth, rightElbowY+rightElbowY/handWidth);
-        curveVertex(rightElbowX-rightElbowX/handWidth, rightElbowY-rightElbowY/handWidth);
-        curveVertex(rightWristX-rightWristX/handWidth, rightWristY-rightWristY/handWidth);
-        curveVertex(rightWristX+rightWristX/handWidth, rightWristY+rightWristY/handWidth);
-        endShape(CLOSE);
+        curveVertex(rightWrist.x+handWidth, rightWrist.y+handWidth);
+        curveVertex(rightElbow.x+handWidth, rightElbow.y+handWidth);
 
-        
+        curveVertex(rightElbow.x-handWidth,rightElbow.y-handWidth);
+        curveVertex(rightWrist.x-handWidth,rightWrist.y-handWidth);       
 
-        // fill(0,222,22);
-
-
-        // Left Hand
-        // blend();
-        // beginShape();
-        // vertex(leftWristX+leftWristX/handWidth, leftWristY-leftWristY/handWidth);
-        // // vertex(leftShoulderX+leftShoulderX/handWidth, leftShoulderY-leftShoulderY/handWidth);
-        // quadraticVertex(leftElbowX+leftElbowX/handWidth, leftElbowY-leftElbowY/handWidth,leftElbowX-leftElbowX/handWidth, leftElbowY+leftElbowY/handWidth);
-        // quadraticVertex(leftWristX-leftWristX/handWidth, leftWristY+leftWristY/handWidth,leftWristX+leftWristX/handWidth, leftWristY-leftWristY/handWidth);
-
-        // quadraticVertex(leftShoulderX+leftShoulderX/handWidth, leftShoulderY-leftShoulderY/handWidth,leftShoulderX-leftShoulderX/handWidth, leftShoulderY+leftShoulderY/handWidth);
-        // quadraticVertex(leftElbowX-leftElbowX/handWidth, leftElbowY+leftElbowY/handWidth,leftElbowX+leftElbowX/handWidth, leftElbowY-leftElbowY/handWidth);
-
-        // endShape(CLOSE);
-
-
-        // beginShape();
-        // vertex(rightElbowX+rightElbowX/handWidth, rightElbowY+rightElbowY/handWidth);
-        // quadraticVertex(rightElbowX+rightElbowX/handWidth, rightElbowY+rightElbowY/handWidth,rightElbowX-rightElbowX/handWidth, rightElbowY-rightElbowY/handWidth);
-        // quadraticVertex(rightWristX-rightWristX/handWidth, rightWristY-rightWristY/handWidth,rightWristX+rightWristX/handWidth, rightWristY+rightWristY/handWidth);
-
-        endShape(CLOSE);
-        ellipse(leftWristX,leftWristY,handSize,handSize);
-        ellipse(rightWristX,rightWristY,handSize,handSize);
-
+        endShape(CLOSE);       
 
     }
 }
