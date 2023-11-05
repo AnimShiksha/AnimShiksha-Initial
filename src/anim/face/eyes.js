@@ -9,6 +9,7 @@ class Eyes{
       let y = whichEye.y
       var angle = frameCount * 0.2;
       fill(255);
+      strokeWeight(2);
       stroke(0);
       ellipse(x, y, size, size);
       

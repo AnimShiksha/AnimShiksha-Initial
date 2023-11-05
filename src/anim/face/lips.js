@@ -1,5 +1,3 @@
-
-
 class Lips{
     constructor(){}
     drawLips(mouthLandmarks){
@@ -14,6 +12,8 @@ class Lips{
     
     
     
+      stroke(0);
+      strokeWeight(2);
       fill(212, 55, 105);
       beginShape();
       let UpperLipsInner = mouthLandmarks.lipsUpperInner;

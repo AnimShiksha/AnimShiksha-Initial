@@ -7,7 +7,7 @@ class GhadiFace{
         let lips = new Lips();
         // let nose = new Nose();
         let hair = new Hairs();
-        let ghadilogo_ = new GhadiLogo()
+        let ghadilogo_ = new GhadiLogo();
 
 
         // console.log(faceModel.boundingBox);
@@ -27,7 +27,7 @@ class GhadiFace{
         }
         endShape(CLOSE);
       
-        
+     
         eyeBrow.drawEyeBrow(faceModel.annotations,bestFitSize/1.5);
       
         // console.log(faceModel.annotations)
@@ -39,13 +39,13 @@ class GhadiFace{
       
         // console.log(faceModel.annotations);
       
-        let nose_ = scalePoint(faceModel.annotations.noseTip[0]);
         // nose.drawNose(nose_,bestFitSize);
-        ghadilogo_.ghadiLogo(nose_,bestFitSize)
       
         lips.drawLips(faceModel.annotations);     
         
-        hair.drawHairs(faceModel.annotations.silhouette,0)
+        hair.drawHairs(faceModel.annotations.silhouette,0);
+        let nose_ = scalePoint(faceModel.annotations.noseTip[0]);
+        ghadilogo_.ghadiLogo(nose_,bestFitSize);   
         
       }      
 }
