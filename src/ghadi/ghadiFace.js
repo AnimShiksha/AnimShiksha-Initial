@@ -4,9 +4,10 @@ class GhadiFace{
     ghadiFace(faceModel){
         let eye = new Eyes();
         let eyeBrow = new EyeBrow();
-        let lips = new Lips()
-        let nose = new Nose()
-        let hair = new Hairs()
+        let lips = new Lips();
+        // let nose = new Nose();
+        let hair = new Hairs();
+        let ghadilogo_ = new GhadiLogo()
 
 
         // console.log(faceModel.boundingBox);
@@ -39,7 +40,8 @@ class GhadiFace{
         // console.log(faceModel.annotations);
       
         let nose_ = scalePoint(faceModel.annotations.noseTip[0]);
-        nose.drawNose(nose_,bestFitSize);
+        // nose.drawNose(nose_,bestFitSize);
+        ghadilogo_.ghadiLogo(nose_,bestFitSize)
       
         lips.drawLips(faceModel.annotations);     
         
