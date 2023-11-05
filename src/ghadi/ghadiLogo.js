@@ -45,7 +45,7 @@ class GhadiLogo{
             const y = nose.y + sin(angle) * (noseSize * 2.5); // Adjust the radius as needed
 
             // Display the number at the calculated position
-            textSize(20);
+            textSize(17);
             text(i, x, y);
         }
 

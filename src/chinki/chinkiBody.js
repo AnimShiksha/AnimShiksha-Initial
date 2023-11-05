@@ -12,11 +12,11 @@ class ChinkiBody{
 
         let handScaling = ((Scalingx/4) + (Scalingy/4))/50
 
+        girlHands.girlsHandsShoulderToElbow(bodyPoses,20,handScaling/1.2);
         girlTummy_.girlTummy(bodyPoses,20,10);
-        girlHands.girlsHandsShoulderToElbow(bodyPoses,20,handScaling);
-        girlHands.girlsHandsElbowToWrist(bodyPoses,20,handScaling);
         girlPant.girlsPant(bodyPoses,20,20);
-        girlSkirt.girlsSkirt(bodyPoses);
         
+        girlSkirt.girlsSkirt(bodyPoses);
+        girlHands.girlsHandsElbowToWrist(bodyPoses,20,handScaling/1.2);        
     }
 }

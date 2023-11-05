@@ -10,7 +10,7 @@ class GirlsHands{
         let leftWrist = pose_.leftWrist;
         let rightWrist = pose_.rightWrist;
 
-        fill(24, 92, 201);
+        fill(148, 150, 126);
         stroke(2);
         strokeWeight(2);
         smooth();
@@ -56,7 +56,7 @@ class GirlsHands{
         let leftElbow = pose_.leftElbow;
         let rightElbow = pose_.rightElbow;
 
-        fill(24, 92, 21);
+        fill(8, 2, 48);
         stroke(2);
         strokeWeight(2);
         smooth();

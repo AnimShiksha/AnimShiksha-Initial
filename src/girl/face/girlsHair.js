@@ -3,8 +3,8 @@ class GirlHairs{
 
     girlsHair(points,hairHeight,goDown){
       stroke(0);
-      strokeWeight(4);
-      fill(0);
+      strokeWeight(1);
+      fill(43, 10, 13);
 
       beginShape();
       for(let i = 0;i<=10;i++){
