@@ -1,7 +1,7 @@
-class GirlsFace{
+class ChinkiFace{
     constructor(){}
 
-    girlsFace(faceModel){
+    chinkiFace(faceModel){
         let eye = new GirlEyes();
         let eyeBrow = new GirlsEyeBrow();
         let bindi = new Bindi()
