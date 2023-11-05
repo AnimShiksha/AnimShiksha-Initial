@@ -23,6 +23,9 @@ function setup() {
 
 //   hairIMG_ = loadImage('artifacts/girlHairs.jpg',imageLoaded);
 
+  backgroundIMG = loadImage('kooda/home.jpg');
+
+
   // video.size(480,360);
 
   chinkiFace_ = new ChinkiFace();
@@ -54,7 +57,8 @@ function modelReady() {
 }
 
 function draw() {
-  background(242, 211, 10);
+  // background(242, 211, 10);
+  background(backgroundIMG,0,0);
   // image(video, 0, 0)
   if(predictions.length){
       // Hair Image is Not Working.
@@ -64,7 +68,6 @@ function draw() {
       drawNeck()
      }
     chinkiFace_.chinkiFace(predictions[0]);
-
   }
   if(poses){
     chinkiBody_.chinkiBody(poses);
@@ -87,7 +90,7 @@ function drawNeck(){
   let midx = (leftShoulder.x + rightShoulder.x)/2
   let midy = (leftShoulder.y + rightShoulder.y)/2
 
-  fill(77, 10, 27); // Skin color
+  fill(148, 150, 126); // Skin color
   stroke(2);
   strokeWeight(2);
   beginShape();

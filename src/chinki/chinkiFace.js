@@ -33,8 +33,8 @@ class ChinkiFace{
         // console.log(faceModel.annotations)
 
 
-        hair.girlsHair(faceOutline,bestFitSize/2,2)      
-        bindi.girlBindi(faceModel.annotations);
+        hair.girlsHair(faceOutline,bestFitSize*2,bestFitSize*0.1)      
+        bindi.girlBindi(faceModel.annotations,bestFitSize/15);
         eye.makeEyes(faceModel.annotations,bestFitSize/3);
         nose.girlNose(faceModel.annotations,0,bestFitSize/1.2);
         // cheeks.girlsCheeks(faceModel.annotations);

@@ -13,7 +13,7 @@ class GirlsTummy {
       // let midx = (leftShoulder.x + rightShoulder.x)/2
       // let midy = (leftShoulder.y + rightShoulder.y)/2
 
-      fill(12, 105, 3); // Red color for the shirt
+      fill(8, 2, 48); // Red color for the shirt
       beginShape();
 
       curveVertex(leftHip.x, leftHip.y-leftHip.y/tummyDown);

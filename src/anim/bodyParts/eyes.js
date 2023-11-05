@@ -11,8 +11,10 @@ class Eyes{
     noStroke();
     ellipse(x, y, size, size);
     
-    fill(56);
-    noStroke();
+    fill(0);
+    // noStroke();
+    stroke(0);
+    strokeWeight(2);
     ellipse(x+cos(angle*n)*size/5, y+sin(angle*n)*size/5, size/2, size/2);
   }
 

@@ -10,7 +10,7 @@ class GirlsHands{
         let leftWrist = pose_.leftWrist;
         let rightWrist = pose_.rightWrist;
 
-        fill(24, 92, 201);
+        fill(148, 150, 126);
         stroke(2);
         strokeWeight(2);
         smooth();
@@ -42,6 +42,10 @@ class GirlsHands{
 
         endShape(CLOSE);
 
+        
+        ellipse(leftElbow.x, leftElbow.y, handWidth*3);
+        ellipse(rightElbow.x, rightElbow.y, handWidth*3);
+
     }
 
 
@@ -52,7 +56,7 @@ class GirlsHands{
         let leftElbow = pose_.leftElbow;
         let rightElbow = pose_.rightElbow;
 
-        fill(24, 92, 21);
+        fill(8, 2, 48);
         stroke(2);
         strokeWeight(2);
         smooth();
@@ -73,7 +77,10 @@ class GirlsHands{
         curveVertex(rightElbow.x-handWidth,rightElbow.y-handWidth);
         curveVertex(rightWrist.x-handWidth,rightWrist.y-handWidth);       
 
-        endShape(CLOSE);     
+        endShape(CLOSE);  
+        
+        ellipse(leftWrist.x,leftWrist.y,handWidth*3);
+        ellipse(rightWrist.x,rightWrist.y,handWidth*3);
 
 
     }
