@@ -1,7 +1,7 @@
 class GirlHairs{
     constructor(){}
 
-    girlsHair(points,HairsHeight){
+    girlsHair(points,hairHeight,goDown){
       stroke(0);
       strokeWeight(4);
       fill(0);
@@ -9,30 +9,30 @@ class GirlHairs{
       beginShape();
       for(let i = 0;i<=10;i++){
         curveVertex(scalePoint(points[i]).x, scalePoint(points[i]).y);
-        // if(i >4){
-        //   curveVertex(scalePoint(points[i]).x+scalePoint(points[i]).x/20, scalePoint(points[i]).y);
-        // }
         if(i ==10){
-          curveVertex(scalePoint(points[i]).x+scalePoint(points[i]).x/30, scalePoint(points[i]).y+scalePoint(points[i]).y/5);
+          curveVertex(scalePoint(points[i]).x+scalePoint(points[i]).x/hairHeight, scalePoint(points[i]).y+scalePoint(points[i]).y/goDown);
         }
       }
 
       for(let i = 10;i>=0;i--){
-        curveVertex(scalePoint(points[i]).x, scalePoint(points[i]).y-scalePoint(points[i]).y/HairsHeight);
-      }
+        if(i<5){
+          curveVertex(scalePoint(points[i]).x+scalePoint(points[i]).x/hairHeight, scalePoint(points[i]).y-scalePoint(points[i]).y/hairHeight);
+        }else{
+          curveVertex(scalePoint(points[i]).x+scalePoint(points[i]).x/hairHeight, scalePoint(points[i]).y-scalePoint(points[i]).y/hairHeight);
+        }
 
+      }
       for(let i = 35;i>=26;i--){
-        curveVertex(scalePoint(points[i]).x, scalePoint(points[i]).y-scalePoint(points[i]).y/HairsHeight);
+        if(i>30){
+          curveVertex(scalePoint(points[i]).x-scalePoint(points[i]).x/hairHeight, scalePoint(points[i]).y-scalePoint(points[i]).y/hairHeight);
+        }else{
+          curveVertex(scalePoint(points[i]).x-scalePoint(points[i]).x/hairHeight, scalePoint(points[i]).y-scalePoint(points[i]).y/hairHeight);
+          curveVertex(scalePoint(points[26]).x-scalePoint(points[26]).x/hairHeight, scalePoint(points[26]).y+scalePoint(points[i]).y/goDown);
+        }
       }
 
       for(let i = 26;i<36;i++){
         curveVertex(scalePoint(points[i]).x, scalePoint(points[i]).y);
-        // if(i<30){
-        //   curveVertex(scalePoint(points[i]).x-scalePoint(points[i]).x/20, scalePoint(points[i]).y);
-        // }
-        if(i ==26){
-          curveVertex(scalePoint(points[i]).x-scalePoint(points[i]).x/30, scalePoint(points[i]).y+scalePoint(points[i]).y/5);
-        }
       }
       endShape();
   }
