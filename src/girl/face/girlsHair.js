@@ -1,37 +1,39 @@
 class GirlHairs{
     constructor(){}
 
-    girlsHair(points,ellipseSize){
-      beginShape();
+    girlsHair(points,hairHeight,goDown){
+      stroke(0);
+      strokeWeight(4);
       fill(0);
-      for(let i = 0;i<points.length;i++){
-        if(i <=5){
-          // ellipse(scalePoint(points[i]).x,scalePoint(points[i]).y, 10,10);
-          if(i%2 ==0){
-            ellipse(scalePoint(points[i]).x,scalePoint(points[i]).y-20, ellipseSize,ellipseSize);
-            // vertex(scalePoint(points[i]).x,scalePoint(points[i]).y);
-            vertex(scalePoint(points[i]).x, scalePoint(points[i]).y-20)
-          }
-          else{
-            ellipse(scalePoint(points[i]).x,scalePoint(points[i]).y-30, ellipseSize,ellipseSize);
-            vertex(scalePoint(points[i]).x, scalePoint(points[i]).y-30);
-            vertex(scalePoint(points[i]).x, scalePoint(points[i]).y);
-          }
-          // vertex(scalePoint(points[5]).x, scalePoint(points[5]).y);
-        }else if( i >= 31){
-          // ellipse(scalePoint(points[i]).x,scalePoint(points[i]).y, 10,10);
-          if(i%2 ==0){
-            ellipse(scalePoint(points[i]).x,scalePoint(points[i]).y-20, ellipseSize,ellipseSize);
-            vertex(scalePoint(points[i]).x, scalePoint(points[i]).y-20)
-            vertex(scalePoint(points[i]).x, scalePoint(points[i]).y)
-          }
-          else{
-            ellipse(scalePoint(points[i]).x,scalePoint(points[i]).y-30, ellipseSize,ellipseSize);
-            vertex(scalePoint(points[i]).x, scalePoint(points[i]).y-30)
-            vertex(scalePoint(points[i]).x, scalePoint(points[i]).y)
-          }
+
+      beginShape();
+      for(let i = 0;i<=10;i++){
+        curveVertex(scalePoint(points[i]).x, scalePoint(points[i]).y);
+        if(i ==10){
+          curveVertex(scalePoint(points[i]).x+scalePoint(points[i]).x/hairHeight, scalePoint(points[i]).y+scalePoint(points[i]).y/goDown);
         }
       }
-      endShape(CLOSE);
-    }
+
+      for(let i = 10;i>=0;i--){
+        if(i<5){
+          curveVertex(scalePoint(points[i]).x+scalePoint(points[i]).x/hairHeight, scalePoint(points[i]).y-scalePoint(points[i]).y/hairHeight);
+        }else{
+          curveVertex(scalePoint(points[i]).x+scalePoint(points[i]).x/hairHeight, scalePoint(points[i]).y-scalePoint(points[i]).y/hairHeight);
+        }
+
+      }
+      for(let i = 35;i>=26;i--){
+        if(i>30){
+          curveVertex(scalePoint(points[i]).x-scalePoint(points[i]).x/hairHeight, scalePoint(points[i]).y-scalePoint(points[i]).y/hairHeight);
+        }else{
+          curveVertex(scalePoint(points[i]).x-scalePoint(points[i]).x/hairHeight, scalePoint(points[i]).y-scalePoint(points[i]).y/hairHeight);
+          curveVertex(scalePoint(points[26]).x-scalePoint(points[26]).x/hairHeight, scalePoint(points[26]).y+scalePoint(points[i]).y/goDown);
+        }
+      }
+
+      for(let i = 26;i<36;i++){
+        curveVertex(scalePoint(points[i]).x, scalePoint(points[i]).y);
+      }
+      endShape();
+  }
 }
