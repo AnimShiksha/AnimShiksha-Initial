@@ -2,8 +2,8 @@ let facemesh;
 let poseNet;
 let video;
 let predictions = [];
-let drawface_;
-let drawbody_;
+let ghadiFace_;
+let ghadiBody_;
 let pose_;
 let poses;
 let constraints = {
@@ -31,11 +31,11 @@ function setup() {
   poseNet = ml5.poseNet(video, modelLoaded);
   poseNet.on('pose',gotPose);
 
-  backgroundIMG = loadImage('artifacts/moon.avif')
+//   backgroundIMG = loadImage('artifacts/moon.avif')
   // video.size(480,360);
 
-  drawface_ = new DrawFace();
-  drawbody_ = new DrawBody()
+  ghadiFace_ = new GhadiFace();
+  ghadiBody_ = new GhadiBody()
 
 }
 
@@ -57,16 +57,16 @@ function modelReady() {
 }
 
 function draw() {
-  // background(242, 211, 10);
-  background(backgroundIMG,0,0)
+  background(242, 211, 10);
+//   background(backgroundIMG,0,0)
   if(predictions.length){
     if(poses){
       drawNeck()
      }
-    drawface_.drawFace(predictions[0]);
+    ghadiFace_.ghadiFace(predictions[0]);
   }
   if(poses){
-    drawbody_.drawBody(poses);
+    ghadiBody_.ghadiBody(poses);
   }
 }
 

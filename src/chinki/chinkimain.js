@@ -2,23 +2,13 @@ let facemesh;
 let poseNet;
 let video;
 let predictions = [];
-let drawface_;
+let chinkiFace_;
 let drawbody_;
+let chinkiBody_;
 let pose_;
 let poses;
-let constraints = {
-  video: {
-    mandatory: {
-      minWidth: 1280,
-      minHeight: 720
-    },
-    optional: [{ maxFrameRate: 10 }]
-  },
-//   audio: true
-};
-
 let backgroundIMG;
-
+let hairIMG_;
 
 function setup() {
   createCanvas(1280, 720);
@@ -31,11 +21,12 @@ function setup() {
   poseNet = ml5.poseNet(video, modelLoaded);
   poseNet.on('pose',gotPose);
 
-  backgroundIMG = loadImage('artifacts/moon.avif')
+//   hairIMG_ = loadImage('artifacts/girlHairs.jpg',imageLoaded);
+
   // video.size(480,360);
 
-  drawface_ = new DrawFace();
-  drawbody_ = new DrawBody()
+  chinkiFace_ = new ChinkiFace();
+  chinkiBody_ = new ChinkiBody();
 
 }
 
@@ -52,21 +43,31 @@ function modelLoaded() {
 }
 
 
+function imageLoaded() {
+  console.log('Image Loaded!🤚🏻');
+}
+
+
+
 function modelReady() {
   console.log("FaceMesh Ready!🤚🏻");
 }
 
 function draw() {
-  // background(242, 211, 10);
-  background(backgroundIMG,0,0)
+  background(242, 211, 10);
+  // image(video, 0, 0)
   if(predictions.length){
+      // Hair Image is Not Working.
+      let hairPoints = predictions[0].annotations.silhouette[32]
+      // image(hairIMG_, scalePoint(hairPoints).x, scalePoint(hairPoints).y, 250, 250)
     if(poses){
       drawNeck()
      }
-    drawface_.drawFace(predictions[0]);
+    chinkiFace_.chinkiFace(predictions[0]);
+
   }
   if(poses){
-    drawbody_.drawBody(poses);
+    chinkiBody_.chinkiBody(poses);
   }
 }
 
