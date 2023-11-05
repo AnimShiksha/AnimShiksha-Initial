@@ -34,8 +34,8 @@ class GhadiFace{
         let leftEye = scalePoint(faceModel.annotations.leftEyeUpper0[4]);
         let rightEye = scalePoint(faceModel.annotations.rightEyeUpper0[4]);
       
-        eye.drawEye(leftEye,bestFitSize,0);
-        eye.drawEye(rightEye,bestFitSize,0);
+        eye.drawEye(leftEye,bestFitSize,0.1);
+        eye.drawEye(rightEye,bestFitSize,-0.1);
       
         // console.log(faceModel.annotations);
       

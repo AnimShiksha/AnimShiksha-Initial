@@ -14,6 +14,8 @@ class Tummy {
       // let midx = (leftShoulder.x + rightShoulder.x)/2
       // let midy = (leftShoulder.y + rightShoulder.y)/2
 
+      stroke(0);
+      strokeWeight(3);
       fill(12, 105, 3); // Red color for the shirt           
 
       

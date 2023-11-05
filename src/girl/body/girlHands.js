@@ -42,6 +42,10 @@ class GirlsHands{
 
         endShape(CLOSE);
 
+        
+        ellipse(leftElbow.x, leftElbow.y, handWidth*3);
+        ellipse(rightElbow.x, rightElbow.y, handWidth*3);
+
     }
 
 
@@ -73,7 +77,10 @@ class GirlsHands{
         curveVertex(rightElbow.x-handWidth,rightElbow.y-handWidth);
         curveVertex(rightWrist.x-handWidth,rightWrist.y-handWidth);       
 
-        endShape(CLOSE);     
+        endShape(CLOSE);  
+        
+        ellipse(leftWrist.x,leftWrist.y,handWidth*3);
+        ellipse(rightWrist.x,rightWrist.y,handWidth*3);
 
 
     }

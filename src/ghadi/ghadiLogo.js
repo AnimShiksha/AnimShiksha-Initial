@@ -7,6 +7,7 @@ class GhadiLogo{
         ellipse(nose.x, nose.y, noseSize/2, noseSize/2); // Adjust the size as needed
         let hours = 12-frameCount/200;
         let minutes = 15+frameCount/20;
+
         // Calculate the angle for the hour hand
         const hourAngle = TWO_PI * (hours % 12) / 12 - HALF_PI; // Offset by -90 degrees
         const hourLength = noseSize * 1.5; // Adjust the length of the hour hand
@@ -22,7 +23,7 @@ class GhadiLogo{
 
 
         stroke(0);
-        strokeWeight(10);
+        strokeWeight(6);
         fill(2)
         // Draw the hour hand
         line(nose.x, nose.y, nose.x + cos(hourAngle) * hourLength, nose.y + sin(hourAngle) * hourLength);
@@ -32,7 +33,7 @@ class GhadiLogo{
 
 
         stroke(17, 4, 41);
-        strokeWeight(9);
+        strokeWeight(6);
         fill(255); // White color for numbers
         textSize(24); // Adjust the text size as needed
 
@@ -44,8 +45,9 @@ class GhadiLogo{
             const y = nose.y + sin(angle) * (noseSize * 2.5); // Adjust the radius as needed
 
             // Display the number at the calculated position
+            textSize(20);
             text(i, x, y);
         }
 
-      }
+    }
 }
